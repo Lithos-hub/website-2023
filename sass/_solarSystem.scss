@@ -1,0 +1,106 @@
+@import "./variables";
+
+#orbit-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $orbit_1_radius;
+  height: $orbit_1_radius;
+}
+#orbit-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $orbit_2_radius;
+  height: $orbit_2_radius;
+}
+#orbit-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $orbit_3_radius;
+  height: $orbit_3_radius;
+}
+#orbit-4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $orbit_4_radius;
+  height: $orbit_4_radius;
+}
+
+#sphere-1 {
+  animation: orbit_1 7s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#sphere-2 {
+  animation: orbit_2 5s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sphere-3 {
+  animation: orbit_3 10s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#sphere-4 {
+  animation: orbit_4 30s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes orbit_1 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg)
+      translate(calc($orbit_1_radius / 2)) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg)
+      translate(calc($orbit_1_radius / 2)) rotate(-360deg);
+  }
+}
+@keyframes orbit_2 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg)
+      translate(calc($orbit_2_radius / 2)) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg)
+      translate(calc($orbit_2_radius / 2)) rotate(-360deg);
+  }
+}
+@keyframes orbit_3 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg)
+      translate(calc($orbit_3_radius / 2)) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg)
+      translate(calc($orbit_3_radius / 2)) rotate(-360deg);
+  }
+}
+@keyframes orbit_4 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg)
+      translate(calc($orbit_4_radius / 2)) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg)
+      translate(calc($orbit_4_radius / 2)) rotate(-360deg);
+  }
+}
