@@ -13,6 +13,8 @@ import {
 import { useIntersectionObserver } from "@/hooks/useIsVisible";
 import { useRouter } from "next/router";
 import Jumper from "@/components/Jumper/Jumper";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const router = useRouter();
@@ -60,8 +62,28 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logos/favicon.ico" />
       </Head>
+      <section>
+        <motion.img
+          src="/noise.png"
+          className="fixed -top-50 -left-50 w-screen h-full object-cover mix-blend-soft-light"
+          initial={{
+            y: 0,
+            x: 0,
+            opacity: 0.1,
+          }}
+          animate={{
+            y: [-50, -10, 50, 10, -10, 40, -10, 0, -40, -30],
+            x: [0, -50, -10, -60, 0, 10, -50, -100, 50, 0, -50],
+            opacity: [0.3, 5, 0.4, 0.8, 1, 0.7, 0.5, 1, 0.5],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 0.08,
+          }}
+        />
+      </section>
       <DefaultLayout>
-        <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden z-0">
+        <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden z-0 duration-500">
           {/* Header */}
           <Header />
           {/* Hero */}

@@ -26,14 +26,99 @@
 .avatar {
   @apply rounded-full border border-primary-1/20 w-[80px] h-[80px] md:w-[100px] md:h-[100px] p-1.5 md:p-3 flex flex-col items-center justify-center bg-opacity-10 duration-200 hover:bg-primary-1/10 hover:scale-110;
 
-  box-shadow: 1rem 1rem 5rem #201523, -0.1rem -0.1rem 0.5rem #ffcb6915;
+  box-shadow: 1rem 1rem 5rem #201523, -0.1rem -0.1rem 0.5rem #ffcb6996;
   transition: 1s ease;
 
   &:hover {
-    box-shadow: 0.1rem 0.1rem 0.5rem #ffcb6931, -1rem -2rem 1rem transparent;
+    box-shadow: 0.1rem 0.1rem 0.5rem #ffcb6931, -1rem -2rem 1rem transparent,
+      0rem 0rem 0.5rem #ffcb69a4;
   }
 }
 
 .project__card {
   @apply flex flex-col flex-shrink-0 w-screen h-screen gap-5 justify-center p-20 items-center;
+}
+
+.projects__ray-1 {
+  @apply w-full absolute right-0 top-[30%] bg-gradient-to-b from-transparent via-secondary-1/20 to-transparent h-[500px] -skew-y-12;
+  animation: ray_1 15s linear infinite alternate;
+  filter: contrast(1000) blur(50px);
+}
+
+@keyframes ray_1 {
+  0% {
+    filter: brightness(0.1);
+  }
+  25% {
+    filter: brightness(0.5);
+  }
+  50% {
+    filter: brightness(0.5);
+  }
+  75% {
+    filter: brightness(0.5);
+  }
+  100% {
+    filter: brightness(0.8);
+  }
+}
+
+.projects__ray-2 {
+  @apply w-full absolute right-0 top-[30%] bg-gradient-to-t from-transparent via-primary-1/10 to-transparent h-[200px] -skew-y-12;
+  animation: ray_2 10s linear infinite alternate;
+  animation-delay: 1s;
+  filter: contrast(1000) blur(50px);
+}
+
+@keyframes ray_2 {
+  0% {
+    filter: brightness(0.8);
+    opacity: 0;
+  }
+  25% {
+    filter: brightness(0.3);
+    opacity: 0.3;
+  }
+  50% {
+    filter: brightness(0.7);
+    opacity: 0.5;
+  }
+  75% {
+    filter: brightness(0.2);
+    opacity: 0.1;
+  }
+  100% {
+    filter: brightness(0.1);
+    opacity: 0.5;
+  }
+}
+
+.projects__ray-3 {
+  @apply w-full absolute right-0 top-[50%] bg-gradient-to-b from-transparent via-primary-1/20 to-transparent h-[300px] -skew-y-12;
+  animation: ray_3 10s linear infinite alternate;
+  animation-delay: 1s;
+  filter: contrast(1000px) blur(1000px);
+}
+
+@keyframes ray_3 {
+  0% {
+    filter: brightness(1000);
+    opacity: 1;
+  }
+  25% {
+    filter: brightness(10);
+    opacity: 0.3;
+  }
+  50% {
+    filter: brightness(1000);
+    opacity: 0.5;
+  }
+  75% {
+    filter: brightness(2);
+    opacity: 0.1;
+  }
+  100% {
+    filter: brightness(1);
+    opacity: 0.5;
+  }
 }

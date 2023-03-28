@@ -51,7 +51,10 @@ const Projects = () => (
       Projects
     </h3>
 
-    <div className="w-full absolute top-[30%] bg-gradient-to-br from-transparent via-dark-1/50 to-secondary-1/10 left-0 h-[500px] -skew-y-12" />
+    <div className="w-full absolute top-[30%] bg-gradient-to-br from-transparent via-dark-1/50 to-secondary-1/10 left-0 h-[500px] -skew-y-12 blur-lg" />
+    <div className="projects__ray-1" />
+    <div className="projects__ray-2" />
+    <div className="projects__ray-3" />
 
     <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
       {projects.map((project, i) => (

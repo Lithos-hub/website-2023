@@ -37,11 +37,11 @@ const SolarSystem: FC = () => (
     />
     <div
       id="sphere-3"
-      className="h-[5px] w-[5px] bg-white rounded-full opacity-50"
+      className="h-[5px] w-[5px] bg-white rounded-full opacity-50 "
     />
     <div
       id="sphere-4"
-      className="h-[10px] w-[10px] bg-[#ffcb69] rounded-full opacity-100"
+      className="h-[10px] w-[10px] bg-[#ffcb69] rounded-full"
     />
   </motion.div>
 );
