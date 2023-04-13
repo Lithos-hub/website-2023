@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Avatar from "./Avatar";
 
 const skills = [
@@ -89,7 +88,7 @@ const Skills = () => (
       Skills
     </h3>
 
-    <div className="grid grid-cols-4 md:grid-cols-4 gap-5 mt-20">
+    <div className="grid grid-cols-4 md:grid-cols-4 gap-x-5 md:gap-x-20 mt-20">
       {skills.map(({ image, name }, i) => (
         <Avatar key={i} index={i} image={image} name={name} />
       ))}

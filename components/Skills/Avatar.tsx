@@ -32,8 +32,8 @@ const Avatar: FC<Props> = ({ image, name, index }) => {
       </motion.div>
       {displayName ? (
         <motion.small
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: -5 }}
           transition={{
             duration: 0.5,
           }}

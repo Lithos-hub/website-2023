@@ -26,14 +26,14 @@ const Jumbotron = () => {
         }}
         className="flex flex-col gap-5 text-center"
       >
-        <h1 className="text-3xl tracking-widest font-extralight uppercase">
+        <h1 className="text-xl md:text-3xl tracking-widest font-extralight uppercase">
           Carlos Segura García
         </h1>
-        <h2 className="font-extralight uppercase tracking-widest">
+        <h2 className="text-sm md:text-lg font-extralight uppercase tracking-widest">
           Front-end Developer
         </h2>
       </motion.div>
-      <h2 className="flex justify-center tracking-widest font-extrabold text-white text-3xl text-center mb-20">
+      <h2 className="flex justify-center tracking-widest font-extrabold text-white text-lg md:text-3xl text-center mb-20">
         <Typewriter
           words={[
             "Hello!",
@@ -48,7 +48,7 @@ const Jumbotron = () => {
           delaySpeed={2000}
         />
       </h2>
-      <nav className="flex justify-between gap-5 z-20">
+      <nav className="grid grid-cols-2 md:grid-cols-4 gap-5 z-20">
         <button
           onClick={() => navigateSmoothly("#about")}
           className="uppercase font-extralight link"

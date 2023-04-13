@@ -37,15 +37,15 @@ const Card: FC<Props> = ({
       }}
       alt={`${title} -  ${subtitle} - experience image`}
       src={image}
-      className="h-[120px] w-[120px] mx-auto"
+      className="h-[120px] md:w-[120px] mx-auto"
     />
-    <div>
+    <div className="ml-10 md:ml-0">
       <h2 className="text-xl font-bold">{title}</h2>
       <h3>{subtitle}</h3>
     </div>
-    <ul className="flex gap-5 justify-center w-full mx-auto">
+    <ul className="grid grid-cols-4 md:flex gap-5 justify-center w-auto mx-auto">
       {stack.map((item, i) => (
-        <li key={i}>
+        <li key={i} className="mx-auto">
           <motion.img
             initial={{
               x: i % 2 === 0 ? -50 : 50,
@@ -65,16 +65,16 @@ const Card: FC<Props> = ({
         </li>
       ))}
     </ul>
-    <div className="flex gap-5 justify-between">
+    <div className="flex gap-5 justify-between mx-10 md:mx-auto">
       <h4>{start}</h4>
       <strong>-</strong>
       <h4>{finish}</h4>
     </div>
     <ul className="mx-auto">
       {tasks.map((task, i) => (
-        <li key={i} className="flex gap-2 my-2">
+        <li key={i} className="gap-2 my-2">
           <Check color="secondary" />
-          <small>{task}</small>
+          <span className="text-xs ml-2">{task}</span>
         </li>
       ))}
     </ul>
