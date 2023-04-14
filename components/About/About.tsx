@@ -29,32 +29,38 @@ const About = () => (
         This is my
         <span className="text-secondary-1 font-semibold"> history:</span>
       </h4>
-      <div className="w-full md:w-[60vw]">
+      <div className="w-full md:w-[50vw]">
         <p className="text-[15px]">
-          I started learning music at the age of 9, and it has been that way
-          until 2020, when I started learning web development. Since then, I
-          have been self-taught studying online with videos, documentation and
-          developing my own projects. Meanwhile, I studied the DAW CFGS from
-          October 2020 to May 2022.
+          Music has been a part of my life since I was 9, but in 2020, I
+          discovered my passion for web development. With a self-taught
+          approach, I dove into online resources, video tutorials, and my own
+          projects. Concurrently, I pursued my studies in DAW CFGS from October
+          2020 to May 2022.
         </p>
         <br />
         <p className="text-[15px]">
-          In March 2021, I started my first job as a front-end developer at CGI
-          company being in charge of the entire frontend of a banking
-          application for almost a year.
+          I kickstarted my career in March 2021 as a front-end developer at a
+          CGI company, where I led the development of the entire frontend of a
+          banking application for nearly a year. My expertise in web development
+          led me to Cathedral Software in June 2022, where I work as a front-end
+          developer.{" "}
+          <strong>
+            Here, I continually learn new and cutting-edge technologies, best
+            practices, and agile methodologies.
+          </strong>
         </p>
         <br />
         <p className="text-[15px]">
-          Then, in June 2022, I started working as a front-end developer at
-          Cathedral Software, where I currently continue, learning cutting-edge
-          technologies, best practices and agile methodologies workflows.
+          Moreover, I explore other areas of development, such as backend
+          technologies like Node and{" "}
+          <strong>
+            MongoDB, mobile technologies like Dart and Flutter and WebGL
+            technologies like Three.js.
+          </strong>{" "}
+          I&apos;m always eager to learn and stay up-to-date with the latest
+          trends and tools in the industry.
         </p>
         <br />
-        <p className="text-[15px]">
-          In parallel, I continue my self-taught learning with backend
-          tecnologies such as Node or MongoDB or mobile technologies such as
-          Dart and Flutter (I can&apos;t stop learning).
-        </p>
       </div>
     </article>
   </motion.div>

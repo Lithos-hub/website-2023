@@ -33,7 +33,7 @@ const Jumbotron = () => {
           Front-end Developer
         </h2>
       </motion.div>
-      <h2 className="flex justify-center tracking-widest font-extrabold text-white text-lg md:text-3xl text-center mb-20">
+      <h3 className="flex justify-center tracking-widest font-extrabold text-white text-lg md:text-3xl text-center mb-20">
         <Typewriter
           words={[
             "Hello!",
@@ -47,7 +47,7 @@ const Jumbotron = () => {
           deleteSpeed={50}
           delaySpeed={2000}
         />
-      </h2>
+      </h3>
       <nav className="grid grid-cols-2 md:grid-cols-4 gap-5 z-20">
         <button
           onClick={() => navigateSmoothly("#about")}

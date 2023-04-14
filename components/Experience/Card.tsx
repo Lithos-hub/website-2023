@@ -65,11 +65,11 @@ const Card: FC<Props> = ({
         </li>
       ))}
     </ul>
-    <div className="flex gap-5 justify-between mx-10 md:mx-auto">
-      <h4>{start}</h4>
-      <strong>-</strong>
-      <h4>{finish}</h4>
-    </div>
+    <h4 className="flex gap-5 justify-between mx-10 md:mx-auto">
+      <span>{start}</span>
+      <span className="font-bold">-</span>
+      <span>{finish}</span>
+    </h4>
     <ul className="mx-auto">
       {tasks.map((task, i) => (
         <li key={i} className="gap-2 my-2">

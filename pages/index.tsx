@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import Head from "next/head";
 
 import { DefaultLayout } from "../layout";
@@ -43,14 +43,41 @@ export default function Home() {
     projectsRef
   );
 
-  useEffect(() => {
+  const title = useMemo(() => {
+    let activeSection = "#hero";
     if (typeof window !== "undefined") {
-      if (heroIsVisible) document.location.href = "#hero";
-      if (aboutIsVisible) document.location.href = "#about";
-      if (experienceIsVisible) document.location.href = "#experience";
-      if (skillsIsVisible) document.location.href = "#skills";
-      if (projectsIsVisible) document.location.href = "#projects";
+      if (heroIsVisible) {
+        document.location.href = "#hero";
+        activeSection = "#hero";
+      }
+      if (aboutIsVisible) {
+        document.location.href = "#about";
+        activeSection = "#about";
+      }
+      if (experienceIsVisible) {
+        document.location.href = "#experience";
+        activeSection = "#experience";
+      }
+      if (skillsIsVisible) {
+        document.location.href = "#skills";
+        activeSection = "#skills";
+      }
+      if (projectsIsVisible) {
+        document.location.href = "#projects";
+        activeSection = "#projects";
+      }
     }
+
+    return {
+      "#hero":
+        "Welcome to My Portfolio | Carlos Segura García, Front-End Developer",
+      "#about": "Get to Know Me | My History and Background",
+      "#experience":
+        "My Work Experience | Companies, Technologies and Competences",
+      "#skills": "My Technical Skills | Web Technologies I Specialize In",
+      "#projects":
+        "Highlighted Projects | Web Applications Developed by Carlos Segura García",
+    }[activeSection];
   }, [
     aboutIsVisible,
     experienceIsVisible,
@@ -63,7 +90,7 @@ export default function Home() {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Carlos Segura García | Front-end developer</title>
+        <title>{title}</title>
         <meta name="author" content="Carlos Segura García" />
         <meta name="copyright" content="Carlos Segura García" />
         <meta
@@ -72,7 +99,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Carlos Segura García, Web developer, Web development, Front-end developer, software engineering, software developer, Vue, Vue 3, TypeScript, Nuxt, Docker, Node.js, MongoDB, Mongoose, Express.js, Testing, Pinia, Jest, Testing library, Next.js, Web design, UI/UX design, Portfolio, Responsive design, Tailwind, HTML, CSS, JavaScript, React, Website optimization"
+          content="Carlos Segura García, Web Developer, Front-End Developer, Software Engineer, Vue.js, Vue 3, Nuxt.js, React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, Mongoose, Jest, Testing Library, Pinia, UI/UX Design, Responsive Design, Website Optimization, HTML, CSS, SASS, Tailwind CSS, Git, Docker, Three.js"
         />
         <meta
           property="og:title"
@@ -84,7 +111,7 @@ export default function Home() {
         />
         <meta property="og:image" content={`${origin}/banner.jpg`} />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/logos/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <DefaultLayout>
