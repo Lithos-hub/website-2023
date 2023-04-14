@@ -24,7 +24,7 @@
 }
 
 .avatar {
-  @apply rounded-full border border-primary-1/20 w-[80px] h-[80px] md:w-[90px] md:h-[90px] p-1.5 md:p-2 flex flex-col items-center justify-center bg-opacity-10 duration-200 hover:bg-primary-1/10 hover:scale-110;
+  @apply rounded-full border mx-auto border-primary-1/20 w-[65px] h-[65px] md:w-[90px] md:h-[90px] p-1.5 md:p-2 flex flex-col items-center justify-center bg-opacity-10 duration-200 hover:bg-primary-1/10 hover:scale-110;
 
   box-shadow: 1rem 1rem 5rem #201523, -0.1rem -0.1rem 0.5rem #ffcb6996;
   transition: 1s ease;
@@ -36,11 +36,11 @@
 }
 
 .project__card {
-  @apply flex flex-col flex-shrink-0 w-screen h-screen gap-5 justify-center p-20 items-center;
+  @apply flex flex-col flex-shrink-0 w-screen h-[70vh] my-auto md:h-screen gap-5 justify-center p-10 items-center z-50;
 }
 
 .projects__ray-1 {
-  @apply w-full absolute right-0 top-[30%] bg-gradient-to-b from-transparent via-secondary-1/20 to-transparent h-[500px] -skew-y-12;
+  @apply w-full absolute right-0 top-[30%] bg-gradient-to-b from-transparent via-secondary-1/20 to-transparent h-[500px] -skew-y-12 z-0;
   animation: ray_1 15s linear infinite alternate;
   filter: contrast(1000) blur(50px);
 }
@@ -64,7 +64,7 @@
 }
 
 .projects__ray-2 {
-  @apply w-full absolute right-0 top-[30%] bg-gradient-to-t from-transparent via-primary-1/10 to-transparent h-[200px] -skew-y-12;
+  @apply w-full absolute right-0 top-[30%] bg-gradient-to-t from-transparent via-primary-1/10 to-transparent h-[200px] -skew-y-12 z-0;
   animation: ray_2 10s linear infinite alternate;
   animation-delay: 1s;
   filter: contrast(1000) blur(50px);
@@ -94,7 +94,7 @@
 }
 
 .projects__ray-3 {
-  @apply w-full absolute right-0 top-[50%] bg-gradient-to-b from-transparent via-primary-1/20 to-transparent h-[300px] -skew-y-12;
+  @apply w-full absolute right-0 top-[50%] bg-gradient-to-b from-transparent via-primary-1/20 to-transparent h-[300px] -skew-y-12 z-0;
   animation: ray_3 10s linear infinite alternate;
   animation-delay: 1s;
   filter: contrast(1000px) blur(1000px);

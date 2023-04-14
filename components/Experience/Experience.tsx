@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 import Card from "./Card";
+import { HeaderTitle } from "@/components";
 
 const Experience = () => (
   <motion.div
@@ -10,11 +12,9 @@ const Experience = () => (
     className="h-screen flex relative overflow-hidden flex-col
      md:flex-row w-full justify-evenly mx-auto items-center"
   >
-    <h3 className="absolute top-4 text-primary-1 uppercase font-extralight opacity-50 text-xl md:ml-5 md:top-20 md:text-2xl md:tracking-[20px]">
-      Experience
-    </h3>
+    <HeaderTitle title="Experience" />
 
-    <div className="w-full flex gap-[250px] overflow-x-scroll h-screen snap-x snap-mandatory md:w-auto md:px-[50vw]">
+    <div className="w-full flex md:gap-[250px] overflow-x-scroll h-screen snap-x snap-mandatory md:w-auto md:px-[50vw]">
       <Card
         image="/logos/cathedral-software.png"
         title="Front-end Developer"

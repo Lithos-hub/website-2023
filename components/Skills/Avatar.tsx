@@ -1,7 +1,5 @@
 import React, { FC, useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-
 type Props = {
   image: string;
   name: string;
@@ -20,7 +18,7 @@ const Avatar: FC<Props> = ({ image, name, index }) => {
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="avatar"
+        className="avatar mx-auto"
         onMouseEnter={() => setDisplayName(!displayName)}
         onMouseLeave={() => setDisplayName(!displayName)}
       >
@@ -41,7 +39,7 @@ const Avatar: FC<Props> = ({ image, name, index }) => {
           {name}
         </motion.small>
       ) : (
-        <div className="h-5 w-20"></div>
+        <div className="h-5 w-full"></div>
       )}
     </div>
   );

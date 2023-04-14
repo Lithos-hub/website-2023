@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HeaderTitle } from "@/components";
 
 const About = () => (
   <motion.div
@@ -8,9 +9,8 @@ const About = () => (
     transition={{ duration: 1.5 }}
     className="h-screen flex flex-col w-auto justify-evenly items-center px-[10vw]"
   >
-    <h3 className="absolute top-4 text-primary-1 uppercase font-extralight opacity-50 text-xl md:tracking-[20px] md:ml-5 md:top-20 md:text-2xl">
-      About
-    </h3>
+    <HeaderTitle title="About" />
+
     <article className="text-center flex flex-col gap-5 mx-auto">
       <motion.img
         initial={{

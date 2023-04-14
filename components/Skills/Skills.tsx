@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Avatar from "./Avatar";
 
+import { HeaderTitle } from "@/components";
+
 const skills = [
   {
     image: "/logos/html.png",
@@ -84,11 +86,9 @@ const Skills = () => (
     transition={{ duration: 1.5 }}
     className="h-screen w-full flex flex-col items-center justify-center"
   >
-    <h3 className="absolute top-20 text-2xl text-primary-1 uppercase font-extralight tracking-[20px] opacity-50 ml-5">
-      Skills
-    </h3>
+    <HeaderTitle title="Skills" />
 
-    <div className="grid grid-cols-4 md:grid-cols-4 gap-x-5 md:gap-x-20 mt-20">
+    <div className="grid grid-cols-4 md:grid-cols-4 gap-x-2 md:gap-x-20 mt-20">
       {skills.map(({ image, name }, i) => (
         <Avatar key={i} index={i} image={image} name={name} />
       ))}

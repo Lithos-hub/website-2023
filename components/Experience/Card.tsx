@@ -22,7 +22,7 @@ const Card: FC<Props> = ({
   finish,
   tasks,
 }) => (
-  <article className="experience__card snap-center overflow-hidden">
+  <article className="experience__card snap-center overflow-hidden max-w-[90vw] px-5 md:max-w-auto">
     <motion.img
       initial={{
         y: -50,
@@ -37,9 +37,9 @@ const Card: FC<Props> = ({
       }}
       alt={`${title} -  ${subtitle} - experience image`}
       src={image}
-      className="h-[120px] md:w-[120px] mx-auto"
+      className="h-24 md:h-[120px] md:w-[120px] mx-auto"
     />
-    <div className="ml-10 md:ml-0">
+    <div>
       <h2 className="text-xl font-bold">{title}</h2>
       <h3>{subtitle}</h3>
     </div>
@@ -60,7 +60,7 @@ const Card: FC<Props> = ({
             }}
             alt="Technology stack image"
             src={item}
-            className="h-[35px] w-auto"
+            className="h-7 md:h-[35px] w-auto"
           />
         </li>
       ))}
