@@ -88,7 +88,7 @@ const Skills = () => (
   >
     <HeaderTitle title="Skills" />
 
-    <div className="grid grid-cols-4 md:grid-cols-4 gap-x-2 md:gap-x-20 mt-20">
+    <div className="grid grid-cols-4 md:grid-cols-4 gap-x-2 md:gap-x-10 lg:gap-x-20 mt-20">
       {skills.map(({ image, name }, i) => (
         <Avatar key={i} index={i} image={image} name={name} />
       ))}

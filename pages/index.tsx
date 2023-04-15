@@ -70,7 +70,7 @@ export default function Home() {
 
     return {
       "#hero":
-        "Welcome to My Portfolio | Carlos Segura García, Front-End Developer",
+        "Welcome to My Portfolio | Carlos Segura García, Front-end Developer",
       "#about": "Get to Know Me | My History and Background",
       "#experience":
         "My Work Experience | Companies, Technologies and Competences",
@@ -95,11 +95,11 @@ export default function Home() {
         <meta name="copyright" content="Carlos Segura García" />
         <meta
           name="description"
-          content="Carlos Segura García is a front-end developer based in Spain. Check out his portfolio website showcasing his skills as a front-end developer using technologies such as Vue, React, Next.js, Tailwind CSS and responsive design techniques. Browse through his projects and see how he can help bring your website ideas to life."
+          content="Carlos Segura García is a frontend developer based in Spain. Check out his portfolio website showcasing his skills as a frontend developer using technologies such as Vue, React, Next.js, Tailwind CSS and responsive design techniques. Browse through his projects and see how he can help bring your website ideas to life."
         />
         <meta
           name="keywords"
-          content="Carlos Segura García, Web Developer, Front-End Developer, Software Engineer, Vue.js, Vue 3, Nuxt.js, React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, Mongoose, Jest, Testing Library, Pinia, UI/UX Design, Responsive Design, Website Optimization, HTML, CSS, SASS, Tailwind CSS, Git, Docker, Three.js"
+          content="Carlos Segura García, Web Developer, frontend Developer, Software Engineer, Vue.js, Vue 3, Nuxt.js, React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, Mongoose, Jest, Testing Library, Pinia, UI/UX Design, Responsive Design, Website Optimization, HTML, CSS, SASS, Tailwind CSS, Git, Docker, Three.js"
         />
         <meta
           property="og:title"
