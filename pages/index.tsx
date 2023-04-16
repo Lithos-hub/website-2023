@@ -91,6 +91,10 @@ export default function Home() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
+        <meta
+          name="google-site-verification"
+          content="jxGUtj4OPhY1NvdojyaDnxtwiWRJDJymkPTRPdDtH7w"
+        />
         <meta name="author" content="Carlos Segura García" />
         <meta name="copyright" content="Carlos Segura García" />
         <meta
