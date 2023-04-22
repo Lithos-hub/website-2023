@@ -62,7 +62,7 @@ const Projects = () => (
     <div className="projects__ray-2" />
     <div className="projects__ray-3" />
 
-    <div className="w-full flex md:gap-[250px] overflow-x-scroll h-screen snap-x snap-mandatory md:w-auto md:px-[50vw]">
+    <div className="w-full flex md:gap-[250px] overflow-x-scroll h-screen snap-x snap-mandatory md:w-auto md:px-[50vw] overflow-y-hidden">
       {projects.map((project, i) => (
         <Card key={i} {...project} />
       ))}

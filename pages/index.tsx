@@ -158,7 +158,7 @@ export default function Home() {
           <section
             ref={projectsRef}
             id="projects"
-            className="h-screen bg-gradient-to-b from-[#110a1a] to-transparent relative snap-center"
+            className="h-screen bg-gradient-to-b from-[#110a1a] to-transparent relative snap-center overflow-hidden"
           >
             <Projects />
           </section>
