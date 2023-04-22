@@ -3,10 +3,10 @@ import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
 const Jumbotron = () => {
-  const navigateSmoothly = (section: string) => {
+  const navigateToElement = (section: string) => {
     const element = document.querySelector(section);
     if (typeof window !== "undefined") {
-      element?.scrollIntoView({ behavior: "smooth" });
+      element?.scrollIntoView();
     }
   };
 
@@ -50,25 +50,25 @@ const Jumbotron = () => {
       </h3>
       <nav className="grid grid-cols-2 md:grid-cols-4 gap-5 z-20">
         <button
-          onClick={() => navigateSmoothly("#about")}
+          onClick={() => navigateToElement("#about")}
           className="uppercase font-extralight link"
         >
           About
         </button>
         <button
-          onClick={() => navigateSmoothly("#experience")}
+          onClick={() => navigateToElement("#experience")}
           className="uppercase font-extralight link"
         >
           Experience
         </button>
         <button
-          onClick={() => navigateSmoothly("#skills")}
+          onClick={() => navigateToElement("#skills")}
           className="uppercase font-extralight link"
         >
           Skills
         </button>
         <button
-          onClick={() => navigateSmoothly("#projects")}
+          onClick={() => navigateToElement("#projects")}
           className="uppercase font-extralight link"
         >
           Projects
