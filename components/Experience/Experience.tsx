@@ -30,11 +30,13 @@ const Experience = () => (
           "/logos/tailwind.png",
           "/logos/sass.png",
           "/logos/three.png",
+          "/logos/leaflet.png",
         ]}
         tasks={[
           "Landing page development using Next 13, TypeScript, Tailwind CSS and Three.js.",
           "SPA development using React 18, TypeScript, Tailwind CSS and AG Grid.",
           "SPA development using Vue 2.7, TypeScript, Tailwind CSS and AG Grid.",
+          "SPA development using Vue 2.7, TypeScript, Tailwind CSS and Leaflet.js + Shapefiles.",
           "Testing with Jest, Vitest and Testing Library.",
           "Agile methodologies (Scrumban).",
           "Gitflow, conventional commits and good practices.",

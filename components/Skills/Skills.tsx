@@ -62,6 +62,10 @@ const skills = [
     name: "Three.js",
   },
   {
+    image: "/logos/leaflet.png",
+    name: "Leaflet.js",
+  },
+  {
     image: "/logos/git.png",
     name: "Git",
   },

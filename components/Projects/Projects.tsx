@@ -4,7 +4,17 @@ import { motion } from "framer-motion";
 import Card from "./Card";
 import { HeaderTitle } from "@/components";
 
+// https://ui.dev/amiresponsive
+
 const projects = [
+  {
+    image: "/img/apps/Infojobs-project.png",
+    prevTitle: "React SPA + Node Proxy",
+    href: "https://hackathon-infojobs-2023-lithoshub.netlify.app/",
+    title: "Infojobs Hackathon 2023",
+    description:
+      "My submission for the Infojobs Hackathon 2023 where I propose several new features using OpenAI API (ChatGPT and Whisper) such as a labor assistant chatbot, a job smart search system, light and dark modes, and a skills generator and evaluator on each job offer based on the offer's requirements",
+  },
   {
     image: "/img/apps/iPet-project.png",
     prevTitle: "MERN fullstack SPA",
