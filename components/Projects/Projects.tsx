@@ -1,8 +1,10 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 import Card from "./Card";
 import { HeaderTitle } from "@/components";
+import Image from "next/image";
+import SliderControl from "./SliderControl";
+import { useMemo, useState } from "react";
 
 // https://ui.dev/amiresponsive
 
@@ -57,27 +59,65 @@ const projects = [
   },
 ];
 
-const Projects = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 1.5 }}
-    className="h-screen flex relative overflow-hidden flex-col
+const Projects = () => {
+  const triggerScrollX = (direction: "left" | "right") => () => {
+    const container = document.querySelector(
+      "#projects-container"
+    ) as HTMLElement;
+    const scrollAmount = 1000;
+    if (direction === "left") {
+      container.scrollLeft -= scrollAmount;
+    } else {
+      container.scrollLeft += scrollAmount;
+    }
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="h-screen flex relative overflow-hidden flex-col
      md:flex-row w-full justify-evenly mx-auto items-center"
-  >
-    <HeaderTitle title="Projects" />
+    >
+      <HeaderTitle title="Projects" />
 
-    <div className="w-full absolute top-[30%] bg-gradient-to-br from-transparent via-dark-1/50 to-secondary-1/10 left-0 h-[500px] -skew-y-12 blur-lg" />
-    <div className="projects__ray-1" />
-    <div className="projects__ray-2" />
-    <div className="projects__ray-3" />
+      <div className="w-full absolute top-[30%] bg-gradient-to-br from-transparent via-dark-1/50 to-secondary-1/10 left-0 h-[500px] -skew-y-12 blur-lg" />
+      <div className="projects__ray-1" />
+      <div className="projects__ray-2" />
+      <div className="projects__ray-3" />
 
-    <div className="w-full flex md:gap-[250px] overflow-x-scroll h-screen snap-x snap-mandatory md:w-auto md:px-[50vw] overflow-y-hidden">
-      {projects.map((project, i) => (
-        <Card key={i} {...project} />
-      ))}
-    </div>
-  </motion.div>
-);
+      <section
+        id="projects-container"
+        className="w-full flex md:gap-[250px] overflow-x-scroll h-screen snap-x snap-mandatory md:w-auto md:px-[50vw] overflow-y-hidden relative"
+      >
+        {/* {projectIndexVisible > 0 && (
+          <div className="absolute left-52 bg-red-500">
+            <SliderControl
+              direction="left"
+              onTrigger={triggerScrollX("left")}
+            />
+          </div>
+        )} */}
+        {projects.map((project, i) => (
+          <article
+            key={i}
+            className="project-wrapper flex justify-between w-screen"
+          >
+            <Card key={i} {...project} />
+          </article>
+        ))}
+        {/* {projectIndexVisible < projects.length - 1 && (
+          <div className="absolute right-52 bg-blue-500">
+            <SliderControl
+              direction="right"
+              onTrigger={triggerScrollX("right")}
+            />
+          </div>
+        )} */}
+      </section>
+    </motion.div>
+  );
+};
 
 export default Projects;

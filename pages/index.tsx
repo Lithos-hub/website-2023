@@ -119,14 +119,14 @@ export default function Home() {
       </Head>
 
       <DefaultLayout>
-        <div className="snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden z-0">
+        <div className="snap-y snap-proximity h-screen overflow-y-scroll overflow-x-hidden z-0">
           {/* Header */}
           <Header />
           {/* Hero */}
           <section
             ref={heroRef}
             id="hero"
-            className="h-screen flex flex-col w-auto items-center justify-center relative snap-center overflow-hidden"
+            className="h-screen snap-center flex flex-col w-auto items-center justify-center relative overflow-hidden"
           >
             <Hero />
           </section>
@@ -134,7 +134,7 @@ export default function Home() {
           <section
             ref={aboutRef}
             id="about"
-            className="h-screen bg-gradient-to-b from-transparent to-[#0f0d0f] relative snap-center"
+            className="h-screen snap-center bg-gradient-to-b from-transparent to-[#0f0d0f] relative"
           >
             <About />
           </section>
@@ -142,7 +142,7 @@ export default function Home() {
           <section
             ref={experienceRef}
             id="experience"
-            className="h-screen bg-gradient-to-b from-[#0f0d0f] to-[#0c0b11] relative snap-center w-screen"
+            className="h-screen snap-center bg-gradient-to-b from-[#0f0d0f] to-[#0c0b11] relative w-screen"
           >
             <Experience />
           </section>
@@ -150,7 +150,7 @@ export default function Home() {
           <section
             ref={skillsRef}
             id="skills"
-            className="h-screen bg-gradient-to-b from-[#0c0b11] to-[#110a1a] relative snap-center"
+            className="h-screen snap-center bg-gradient-to-b from-[#0c0b11] to-[#110a1a] relative"
           >
             <Skills />
           </section>
@@ -158,7 +158,7 @@ export default function Home() {
           <section
             ref={projectsRef}
             id="projects"
-            className="h-screen bg-gradient-to-b from-[#110a1a] to-transparent relative snap-center overflow-hidden"
+            className="h-screen snap-center bg-gradient-to-b from-[#110a1a] to-transparent relative overflow-hidden"
           >
             <Projects />
           </section>
