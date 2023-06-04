@@ -8,6 +8,11 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    {
+      pattern: /col-(span|start|end)-\d+/,
+    },
+  ],
   theme: {
     extend: {
       colors: {

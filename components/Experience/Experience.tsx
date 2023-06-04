@@ -1,67 +1,90 @@
-import React from "react";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 
-import Card from "./Card";
 import { HeaderTitle } from "@/components";
+import Timeline from "./Timeline";
+import { Experience } from "@/models";
 
-const Experience = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 1.5 }}
-    className="h-screen flex relative overflow-hidden flex-col
-     md:flex-row w-full justify-evenly mx-auto items-center"
-  >
-    <HeaderTitle title="Experience" />
+const Experience = () => {
+  const years = useMemo(() => {
+    const currentYear = new Date().getFullYear();
+    const initialYear = 2021;
+    return Array.from(
+      { length: currentYear - initialYear + 1 },
+      (_, i) => initialYear + i
+    );
+  }, []);
 
-    <div className="w-full flex md:gap-[250px] overflow-x-scroll h-screen snap-x snap-mandatory md:w-auto md:px-[50vw]">
-      <Card
-        image="/logos/cathedral-software.png"
-        title="Front-end Developer"
-        subtitle="Cathedral Software"
-        start="MAR 2022"
-        finish="CURRENTLY"
-        stack={[
-          "/logos/typescript.png",
-          "/logos/vue.png",
-          "/logos/react.png",
-          "/logos/next.png",
-          "/logos/jest.png",
-          "/logos/tailwind.png",
-          "/logos/sass.png",
-          "/logos/three.png",
-          "/logos/leaflet.png",
-        ]}
-        tasks={[
-          "Landing page development using Next 13, TypeScript, Tailwind CSS and Three.js.",
-          "SPA development using React 18, TypeScript, Tailwind CSS and AG Grid.",
-          "SPA development using Vue 2.7, TypeScript, Tailwind CSS and AG Grid.",
-          "SPA development using Vue 2.7, TypeScript, Tailwind CSS and Leaflet.js + Shapefiles.",
-          "Testing with Jest, Vitest and Testing Library.",
-          "Agile methodologies (Scrumban).",
-          "Gitflow, conventional commits and good practices.",
-        ]}
-      />
-      <Card
-        image="/logos/cgi.png"
-        title="Front-end Developer"
-        subtitle="CGI"
-        start="JUN 2021"
-        finish="MAR 2022"
-        stack={[
-          "/logos/vue.png",
-          "/logos/vuetify.png",
-          "/logos/javascript.png",
-          "/logos/sass.png",
-        ]}
-        tasks={[
-          "SPA development using Vue 2.6, Vuetify and Google App Engine.",
-          "Maintenance and integrations",
-          "Gitflow.",
-        ]}
-      />
-    </div>
-  </motion.div>
-);
+  const experiences = useMemo(
+    () =>
+      [
+        {
+          image: "/logos/cgi.png",
+          title: "Front-end Developer",
+          subtitle: "CGI",
+          initialYear: 2021,
+          initialMonth: 3,
+          endMonth: 6,
+          start: "MAR 2021",
+          finish: "JUN 2022",
+          stack: [
+            { techName: "Vue", imageUrl: "/logos/vue.png" },
+            { techName: "Vuetify", imageUrl: "/logos/vuetify.png" },
+            { techName: "JavaScript", imageUrl: "/logos/javascript.png" },
+            { techName: "Sass", imageUrl: "/logos/sass.png" },
+          ],
+          tasks: [
+            "Frontend development (Vue, Vuetify and Google App Engine)",
+            "Frontend apps maintenance and integrations",
+            "Gitflow forkflow",
+          ],
+        },
+        {
+          image: "/logos/cathedral-software.png",
+          title: "Front-end Developer",
+          subtitle: "Cathedral Software",
+          start: "JUN 2022",
+          finish: "CURRENTLY",
+          initialYear: 2022,
+          initialMonth: 6,
+          endMonth: new Date().getMonth() + 1,
+          stack: [
+            { techName: "TypeScript", imageUrl: "/logos/typescript.png" },
+            { techName: "Vue", imageUrl: "/logos/vue.png" },
+            { techName: "React", imageUrl: "/logos/react.png" },
+            { techName: "Next", imageUrl: "/logos/next.png" },
+            { techName: "Jest", imageUrl: "/logos/jest.png" },
+            { techName: "Tailwind", imageUrl: "/logos/tailwind.png" },
+            { techName: "Sass", imageUrl: "/logos/sass.png" },
+            { techName: "Three.js", imageUrl: "/logos/three.png" },
+            { techName: "Leaflet", imageUrl: "/logos/leaflet.png" },
+          ],
+          tasks: [
+            "Landing page development (Next 13, TypeScript, Tailwind CSS and Three.js)",
+            "SPA development (React, TypeScript, Tailwind CSS and AG Grid)",
+            "SPA development (Vue, TypeScript, Tailwind CSS and AG Grid)",
+            "SPA development (Vue, TypeScript, Tailwind CSS and Leaflet.js)",
+            "Testing (Jest, Vitest and Testing Library)",
+            "Agile methodologies (Scrumban).",
+            "Gitflow, conventional commits and best practices.",
+          ],
+        },
+      ] as Experience[],
+    []
+  );
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="h-screen flex flex-col gap-10 justify-center items-center overflow-x-auto"
+    >
+      <HeaderTitle title="Experience" />
+      <Timeline years={years} experiences={experiences} />
+      <div className="h-[50vh]" />
+    </motion.div>
+  );
+};
 
 export default Experience;
