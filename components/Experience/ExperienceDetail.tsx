@@ -62,7 +62,7 @@ const ExperienceDetail: FC<Experience> = ({
 
   return (
     <div
-      className={`flex flex-col col-start-${colStart} 2xl:col-end-${colEnd}`}
+      className={`flex flex-col z-50 col-start-${colStart} 2xl:col-end-${colEnd}`}
       style={{
         width: `${cardWidth ? `${cardWidth}px` : "500px"}`,
       }}
@@ -90,7 +90,7 @@ const ExperienceDetail: FC<Experience> = ({
             <h3 className="text-sm text-secondary-1">{subtitle}</h3>
           </div>
         </div>
-        <ul className="flex flex-wrap gap-2 justify-center w-auto mx-auto">
+        <ul className="flex flex-wrap gap-5 justify-center w-auto mx-auto">
           {stack.map((item, i) => (
             <li key={i} className="mx-auto">
               <Tooltip title={item.techName} placement="top">
