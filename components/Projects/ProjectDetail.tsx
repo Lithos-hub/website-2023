@@ -1,10 +1,8 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
 import { Project } from "@/models";
 import Image from "next/image";
-import { IconButton } from "@mui/material";
 import { GitHub, OpenInNew } from "@mui/icons-material";
-import Link from "next/link";
 
 const ProjectDetail: FC<Project> = ({
   image,
@@ -37,16 +35,20 @@ const ProjectDetail: FC<Project> = ({
 
       {/* Right button with link to project and repo */}
       <div className="project-button absolute w-[31px] flex flex-col justify-center items-center h-[170px] bottom-0 -right-[2px] bg-gradient-to-b from-primary-1/50  to-secondary-1/50 z-50">
-        <div className="h-full flex flex-col justify-end pb-5 w-full items-center cursor-pointer hover:bg-black/50 duration-300">
-          <a href={repo} target="_blank">
-            <GitHub fontSize="small" />
-          </a>
-        </div>
-        <div className="h-full flex flex-col justify-center w-full items-center cursor-pointer hover:bg-black/50 duration-300">
-          <a href={href} target="_blank">
-            <OpenInNew fontSize="small" />
-          </a>
-        </div>
+        <a
+          href={repo}
+          target="_blank"
+          className="h-full flex flex-col justify-end pb-5 w-full items-center cursor-pointer hover:bg-black/50 duration-300"
+        >
+          <GitHub fontSize="small" />
+        </a>
+        <a
+          href={href}
+          target="_blank"
+          className="h-full flex flex-col justify-center w-full items-center cursor-pointer hover:bg-black/50 duration-300"
+        >
+          <OpenInNew fontSize="small" />
+        </a>
       </div>
 
       <Image

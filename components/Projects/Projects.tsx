@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { HeaderTitle, ProjectDetail } from "@/components";
+import { ProjectDetail } from "@/components";
 import { Project } from "@/models";
 
 // https://ui.dev/amiresponsive
