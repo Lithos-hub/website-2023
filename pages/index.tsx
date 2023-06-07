@@ -86,6 +86,20 @@ export default function Home() {
     skillsIsVisible,
   ]);
 
+  const activeSection = useMemo(() => {
+    if (heroIsVisible) return "#hero";
+    if (aboutIsVisible) return "#about";
+    if (experienceIsVisible) return "#experience";
+    if (skillsIsVisible) return "#skills";
+    if (projectsIsVisible) return "#projects";
+  }, [
+    aboutIsVisible,
+    experienceIsVisible,
+    heroIsVisible,
+    projectsIsVisible,
+    skillsIsVisible,
+  ]);
+
   return (
     <>
       <Head>
@@ -121,7 +135,7 @@ export default function Home() {
       <DefaultLayout>
         <div className="snap-y snap-proximity h-screen overflow-y-scroll overflow-x-hidden z-0">
           {/* Header */}
-          <Header />
+          <Header activeSection={activeSection as string} />
           {/* Hero */}
           <section
             ref={heroRef}
@@ -158,7 +172,7 @@ export default function Home() {
           <section
             ref={projectsRef}
             id="projects"
-            className="h-screen snap-center bg-gradient-to-b from-[#110a1a] to-transparent relative overflow-hidden"
+            className="h-screen lg:snap-center bg-gradient-to-b from-[#110a1a] to-transparent relative"
           >
             <Projects />
           </section>

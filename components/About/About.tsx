@@ -9,7 +9,7 @@ const About = () => (
     transition={{ duration: 1.5 }}
     className="h-screen flex flex-col w-auto justify-evenly items-center px-[10vw]"
   >
-    <HeaderTitle title="About" />
+    {/* <HeaderTitle title="About" /> */}
 
     <article className="text-center flex flex-col gap-5 mx-auto">
       <motion.img

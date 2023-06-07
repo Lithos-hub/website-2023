@@ -6,7 +6,7 @@ type Props = {
 
 const HeaderTitle: FC<Props> = ({ title }) => {
   return (
-    <h3 className="absolute top-4 text-primary-1 uppercase text-xl md:font-extralight md:opacity-50 md:ml-5 md:top-10 md:text-2xl md:tracking-[20px]">
+    <h3 className="absolute top-3 text-primary-1 uppercase text-xl md:font-extralight md:opacity-50 md:ml-5 md:top-10 md:text-2xl md:tracking-[20px]">
       {title}
     </h3>
   );

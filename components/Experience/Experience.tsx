@@ -28,10 +28,10 @@ const Experience = () => {
           start: "MAR 2021",
           finish: "JUN 2022",
           stack: [
-            { techName: "Vue", imageUrl: "/logos/vue.png" },
-            { techName: "Vuetify", imageUrl: "/logos/vuetify.png" },
-            { techName: "JavaScript", imageUrl: "/logos/javascript.png" },
-            { techName: "Sass", imageUrl: "/logos/sass.png" },
+            { techName: "Vue", imageUrl: "/logos/vue.svg" },
+            { techName: "Vuetify", imageUrl: "/logos/vuetify.svg" },
+            { techName: "JavaScript", imageUrl: "/logos/javascript.svg" },
+            { techName: "SASS", imageUrl: "/logos/sass.svg" },
           ],
           tasks: [
             "Frontend development (Vue, Vuetify and Google App Engine)",
@@ -49,15 +49,20 @@ const Experience = () => {
           initialMonth: 6,
           endMonth: new Date().getMonth() + 1,
           stack: [
-            { techName: "TypeScript", imageUrl: "/logos/typescript.png" },
-            { techName: "Vue", imageUrl: "/logos/vue.png" },
-            { techName: "React", imageUrl: "/logos/react.png" },
-            { techName: "Next", imageUrl: "/logos/next.png" },
-            { techName: "Jest", imageUrl: "/logos/jest.png" },
-            { techName: "Tailwind", imageUrl: "/logos/tailwind.png" },
-            { techName: "Sass", imageUrl: "/logos/sass.png" },
-            { techName: "Three.js", imageUrl: "/logos/three.png" },
-            { techName: "Leaflet", imageUrl: "/logos/leaflet.png" },
+            { techName: "Vue", imageUrl: "/logos/vue.svg" },
+            { techName: "React", imageUrl: "/logos/react.svg" },
+            { techName: "TypeScript", imageUrl: "/logos/typescript.svg" },
+            { techName: "Next", imageUrl: "/logos/next.svg" },
+            { techName: "leaflet", imageUrl: "/logos/leaflet.svg" },
+            { techName: "Jest", imageUrl: "/logos/jest.svg" },
+            { techName: "Vitest", imageUrl: "/logos/vitest.svg" },
+            {
+              techName: "Testing Library",
+              imageUrl: "/logos/testing-library.svg",
+            },
+            { techName: "Tailwind", imageUrl: "/logos/tailwind.svg" },
+            { techName: "SASS", imageUrl: "/logos/sass.svg" },
+            { techName: "Three.js", imageUrl: "/logos/three.svg" },
           ],
           tasks: [
             "Landing page development (Next 13, TypeScript, Tailwind CSS and Three.js)",
@@ -80,9 +85,8 @@ const Experience = () => {
       transition={{ duration: 1.5 }}
       className="h-screen flex flex-col gap-10 justify-center items-center overflow-x-auto"
     >
-      <HeaderTitle title="Experience" />
+      {/* <HeaderTitle title="Experience" /> */}
       <Timeline years={years} experiences={experiences} />
-      <div className="h-[50vh]" />
     </motion.div>
   );
 };

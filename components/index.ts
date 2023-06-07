@@ -6,7 +6,7 @@ export { default as Hero } from "./Hero/Hero";
 export { default as Jumbotron } from "./Hero/Jumbotron";
 export { default as SolarSystem } from "./Hero/SolarSystem";
 export { default as Jumper } from "./Jumper/Jumper";
-export { default as Card } from "./Projects/Card";
+export { default as ProjectDetail } from "./Projects/ProjectDetail";
 export { default as Projects } from "./Projects/Projects";
 export { default as SliderControl } from "./Projects/SliderControl";
 export { default as Avatar } from "./Skills/Avatar";

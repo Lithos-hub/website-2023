@@ -7,7 +7,7 @@ const Jumper: FC = () => {
   const jumpToTop = () => {
     const element = document.querySelector("#hero");
     if (typeof window !== "undefined") {
-      element?.scrollIntoView({ behavior: "smooth" });
+      element?.scrollIntoView();
     }
   };
 

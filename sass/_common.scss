@@ -40,6 +40,22 @@
   @apply flex flex-col flex-shrink-0 w-screen h-[70vh] my-auto md:h-screen gap-5 justify-center p-10 items-center z-50;
 }
 
+.project-logo {
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
+}
+
+.project-header {
+  clip-path: polygon(100% 0, 100% 71%, 91% 100%, 0 100%, 0 0);
+}
+
+.project-button {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 18%);
+}
+
+.project-line {
+  clip-path: polygon(10% 0%, 90% 5%, 90% 95%, 0% 90%);
+}
+
 .projects__ray-1 {
   @apply w-full absolute right-0 top-[30%] bg-gradient-to-b from-transparent via-secondary-1/20 to-transparent h-[500px] -skew-y-12 z-0;
   animation: ray_1 15s linear infinite alternate;

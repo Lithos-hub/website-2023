@@ -1,121 +1,144 @@
 import { motion } from "framer-motion";
 
-import Card from "./Card";
-import { HeaderTitle } from "@/components";
-import Image from "next/image";
-import SliderControl from "./SliderControl";
-import { useMemo, useState } from "react";
+import { HeaderTitle, ProjectDetail } from "@/components";
+import { Project } from "@/models";
 
 // https://ui.dev/amiresponsive
 
-const projects = [
+const projects: Project[] = [
   {
-    image: "/img/apps/Infojobs-project.png",
+    image: "/img/apps/infojobs.svg",
+    stack: [
+      { name: "React", icon: "react" },
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "SCSS", icon: "sass" },
+      { name: "TS", icon: "typescript" },
+      { name: "Node", icon: "node" },
+      { name: "Express", icon: "express" },
+      { name: "OpenAI", icon: "openai" },
+    ],
     prevTitle: "React SPA + Node Proxy",
     href: "https://hackathon-infojobs-2023-lithoshub.netlify.app/",
+    repo: "https://github.com/Lithos-hub/infojobs-hackathon",
     title: "Infojobs Hackathon 2023",
     description:
-      "My submission for the Infojobs Hackathon 2023 where I propose several new features using OpenAI API (ChatGPT and Whisper) such as a labor assistant chatbot, a job smart search system, light and dark modes, and a skills generator and evaluator on each job offer based on the offer's requirements",
+      "My submission for the Infojobs Hackathon 2023 where I propose several new features using OpenAI API (ChatGPT and Whisper).",
   },
   {
-    image: "/img/apps/iPet-project.png",
+    image: "/img/apps/iPet.jpg",
+    stack: [
+      { name: "React", icon: "react" },
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "SCSS", icon: "sass" },
+      { name: "TS", icon: "typescript" },
+      { name: "Vitest", icon: "vitest" },
+      { name: "Tailwind", icon: "tailwind" },
+      { name: "Node", icon: "node" },
+      { name: "Express", icon: "express" },
+      { name: "Mongo DB", icon: "mongo" },
+    ],
     prevTitle: "MERN fullstack SPA",
     href: "https://main--ipet-spa.netlify.app/",
+    repo: "https://github.com/Lithos-hub/iPet-SPA",
     title: "iPet",
     description:
-      "Application to manage pets, events and relevant data such as vets, contacts, notes, etc. Made with React 18, MUI and Vite (frontend), and Node, MongoDB and Mongoose (backend). ",
+      "Application to manage pets, events, appointments, vets, contacts, notes, etc.",
   },
   {
-    image: "/img/apps/iMovies-project.png",
+    image: "/img/apps/iMovies-v2.jpg",
+    stack: [
+      { name: "Vue 3", icon: "vue" },
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "SCSS", icon: "sass" },
+      { name: "TS", icon: "typescript" },
+      { name: "Vitest", icon: "vitest" },
+      { name: "Tailwind", icon: "tailwind" },
+      { name: "Node", icon: "node" },
+      { name: "Express", icon: "express" },
+      { name: "Mongo DB", icon: "mongo" },
+    ],
     prevTitle: "MEVN fullstack SPA",
     href: "https://main--imovies-v2.netlify.app/",
+    repo: "https://github.com/Lithos-hub/iMovies-v2-SPA",
     title: "iMovies V2",
-    description:
-      "Remake of my app iMovies using Vue 3, Vite, Vitest, Tailwind CSS, TypeScript, SASS and Pinia (frontend), and Node, MongoDB and Mongoose (backend).",
+    description: "App to search, display and save movies using the TMDB API.",
   },
   {
-    image: "/img/apps/iCompose-project.png",
+    image: "/img/apps/iCompose.jpg",
+    stack: [
+      { name: "Vue 3", icon: "vue" },
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "SCSS", icon: "sass" },
+      { name: "Vitest", icon: "vitest" },
+      { name: "TS", icon: "typescript" },
+      { name: "Tailwind", icon: "tailwind" },
+    ],
     prevTitle: "Frontend SPA (Vue 3)",
     href: "https://icompose.netlify.app/",
+    repo: "https://github.com/Lithos-hub/iCompose-v2",
     title: "iCompose",
-    description:
-      "Vue components portfolio using Vue 3, TypeScript, Vite and Tailwind CSS. Second version of my app iCompose. ",
+    description: "Vue components portfolio made from scratch.",
   },
   {
-    image: "/img/apps/iCode-project.png",
+    image: "/img/apps/iCode.jpg",
+    stack: [
+      { name: "Vue 3", icon: "vue" },
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "SCSS", icon: "sass" },
+      { name: "JS", icon: "javascript" },
+    ],
     prevTitle: "Frontend SPA (Vue 3)",
     href: "https://icode-playground-app.netlify.app/",
+    repo: "https://github.com/Lithos-hub/iCode",
     title: "iCode",
     description:
-      "iCode is a free HTML, CSS and JS online code playground that uses the Monaco Editor (powered by Visual Studio Code). Similar to others online IDE such as CodePen, you will be able to write HTML, CSS, and JS and see the result in real time.",
+      "Online code editor with HTML, CSS and JavaScript using Monaco Editor.",
   },
   {
-    image: "/img/apps/iShop-project.png",
+    image: "/img/apps/iShop.jpg",
+    stack: [
+      { name: "Vue 3", icon: "vue" },
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "SCSS", icon: "sass" },
+      { name: "JS", icon: "javascript" },
+      { name: "Firebase", icon: "firebase" },
+    ],
     prevTitle: "Frontend SPA (Vue 3)",
     href: "https://ishop-app.netlify.app/",
+    repo: "https://github.com/Lithos-hub/iShop",
     title: "iShop",
-    description:
-      "Fake e-commerce app developed with Vue 3 + Vite + Pinia and Google Firebase.",
+    description: "Fake e-commerce app simulating a real ordering process.",
   },
 ];
 
 const Projects = () => {
-  const triggerScrollX = (direction: "left" | "right") => () => {
-    const container = document.querySelector(
-      "#projects-container"
-    ) as HTMLElement;
-    const scrollAmount = 1000;
-    if (direction === "left") {
-      container.scrollLeft -= scrollAmount;
-    } else {
-      container.scrollLeft += scrollAmount;
-    }
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen flex relative overflow-hidden flex-col
-     md:flex-row w-full justify-evenly mx-auto items-center"
+      className="lg:h-full py-20 lg:py-0 w-full flex flex-col items-center justify-center"
     >
-      <HeaderTitle title="Projects" />
+      {/* <HeaderTitle title="Projects" /> */}
 
       <div className="w-full absolute top-[30%] bg-gradient-to-br from-transparent via-dark-1/50 to-secondary-1/10 left-0 h-[500px] -skew-y-12 blur-lg" />
       <div className="projects__ray-1" />
       <div className="projects__ray-2" />
       <div className="projects__ray-3" />
 
-      <section
-        id="projects-container"
-        className="w-full flex md:gap-[250px] overflow-x-scroll h-screen snap-x snap-mandatory md:w-auto md:px-[50vw] overflow-y-hidden relative"
-      >
-        {/* {projectIndexVisible > 0 && (
-          <div className="absolute left-52 bg-red-500">
-            <SliderControl
-              direction="left"
-              onTrigger={triggerScrollX("left")}
-            />
-          </div>
-        )} */}
+      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-5">
         {projects.map((project, i) => (
-          <article
-            key={i}
-            className="project-wrapper flex justify-between w-screen"
-          >
-            <Card key={i} {...project} />
+          <article key={i}>
+            <ProjectDetail {...project} />
           </article>
         ))}
-        {/* {projectIndexVisible < projects.length - 1 && (
-          <div className="absolute right-52 bg-blue-500">
-            <SliderControl
-              direction="right"
-              onTrigger={triggerScrollX("right")}
-            />
-          </div>
-        )} */}
-      </section>
+      </div>
     </motion.div>
   );
 };

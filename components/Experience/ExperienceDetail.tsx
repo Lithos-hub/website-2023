@@ -54,7 +54,7 @@ const ExperienceDetail: FC<Experience> = ({
 
   useEffect(() => {
     if (onlyWidth > 1536 && totalMonths) {
-      setCardWidth(totalMonths * 45);
+      setCardWidth(totalMonths * 50);
     } else {
       setCardWidth(500);
     }
@@ -62,7 +62,7 @@ const ExperienceDetail: FC<Experience> = ({
 
   return (
     <div
-      className={`flex flex-col z-50 col-start-${colStart} 2xl:col-end-${colEnd}`}
+      className={`flex flex-col gap-5 z-50 col-start-${colStart} 2xl:col-end-${colEnd}`}
       style={{
         width: `${cardWidth ? `${cardWidth}px` : "500px"}`,
       }}
