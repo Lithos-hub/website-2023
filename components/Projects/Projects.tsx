@@ -15,6 +15,7 @@ const projects: Project[] = [
       { name: "Tailwind", icon: "tailwind" },
       { name: "TS", icon: "typescript" },
       { name: "OpenAI", icon: "openai" },
+      { name: "Mongo DB", icon: "mongo" },
     ],
     prevTitle: "Next 13 Landing App",
     href: "https://i-adopt-landing-app.vercel.app/",
