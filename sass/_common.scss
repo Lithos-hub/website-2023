@@ -51,6 +51,17 @@
 .project-button {
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 18%);
 }
+.projectrepo-button-inner {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 33%);
+
+  &:hover {
+    box-shadow: inset 0px 0px 10px black;
+  }
+}
+
+.projectapp-button-inner:hover {
+  box-shadow: inset 0px 0px 10px black;
+}
 
 .project-line {
   clip-path: polygon(10% 0%, 90% 5%, 90% 95%, 0% 90%);

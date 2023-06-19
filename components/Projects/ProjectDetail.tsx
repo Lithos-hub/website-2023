@@ -21,7 +21,7 @@ const ProjectDetail: FC<Project> = ({
       <div className="h-[41.5px] w-[2px] bg-secondary-1 absolute top-[65px] right-[12px] rotate-45 rounded-t" />
       <div className="h-[71px] w-[2px] bg-secondary-1 absolute top-[2px] -right-[2px] rounded-br-xl" />
 
-      {/* Right lines to decoration */}
+      {/* Right lines to decorate the card */}
       {[...Array(rightLines)].map((_, i) => (
         <div
           key={i}
@@ -38,14 +38,14 @@ const ProjectDetail: FC<Project> = ({
         <a
           href={repo}
           target="_blank"
-          className="h-full flex flex-col justify-end pb-5 w-full items-center cursor-pointer hover:bg-black/50 duration-300"
+          className="projectrepo-button-inner h-full flex flex-col border border-transparent justify-end pb-5 w-full items-center cursor-pointer hover:bg-black/50 duration-300 hover:scale-90 hover:shadow-inner hover:border-x hover:border-b hover:border-x-black hover:border-b-black"
         >
           <GitHub fontSize="small" />
         </a>
         <a
           href={href}
           target="_blank"
-          className="h-full flex flex-col justify-center w-full items-center cursor-pointer hover:bg-black/50 duration-300"
+          className="projectapp-button-inner h-full flex flex-col justify-center w-full items-center cursor-pointer hover:bg-black/50 duration-300 hover:scale-90 hover:shadow-inner hover:border-x hover:border-b hover:border-x-black hover:border-b-black"
         >
           <OpenInNew fontSize="small" />
         </a>

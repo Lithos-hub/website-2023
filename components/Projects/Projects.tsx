@@ -7,12 +7,30 @@ import { Project } from "@/models";
 
 const projects: Project[] = [
   {
+    image: "/img/apps/iAdopt.jpg",
+    stack: [
+      { name: "Next 13", icon: "next" },
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "Tailwind", icon: "tailwind" },
+      { name: "TS", icon: "typescript" },
+      { name: "OpenAI", icon: "openai" },
+    ],
+    prevTitle: "Next 13 Landing App",
+    href: "https://i-adopt-landing-app.vercel.app/",
+    repo: "https://github.com/Lithos-hub/iAdopt-LandingApp",
+    title: "iAdopt",
+    description:
+      "Chatbot tool that helps animal shelters to find the best match for their animals and potential adopters using ChatGPT.",
+  },
+  {
     image: "/img/apps/infojobs.svg",
     stack: [
       { name: "React", icon: "react" },
       { name: "HTML", icon: "html" },
       { name: "CSS", icon: "css" },
       { name: "SCSS", icon: "sass" },
+      { name: "Tailwind", icon: "tailwind" },
       { name: "TS", icon: "typescript" },
       { name: "Node", icon: "node" },
       { name: "Express", icon: "express" },
@@ -47,7 +65,7 @@ const projects: Project[] = [
       "Application to manage pets, events, appointments, vets, contacts, notes, etc.",
   },
   {
-    image: "/img/apps/iMovies-v2.jpg",
+    image: "/img/apps/iMovies.jpg",
     stack: [
       { name: "Vue 3", icon: "vue" },
       { name: "HTML", icon: "html" },
@@ -63,7 +81,7 @@ const projects: Project[] = [
     prevTitle: "MEVN fullstack SPA",
     href: "https://main--imovies-v2.netlify.app/",
     repo: "https://github.com/Lithos-hub/iMovies-v2-SPA",
-    title: "iMovies V2",
+    title: "iMovies",
     description: "App to search, display and save movies using the TMDB API.",
   },
   {
