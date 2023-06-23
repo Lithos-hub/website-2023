@@ -7,6 +7,21 @@ import { Project } from "@/models";
 
 const projects: Project[] = [
   {
+    image: "/img/apps/iOrbit.jpg",
+    stack: [
+      { name: "React", icon: "react" },
+      { name: "Three.js", icon: "three" },
+      { name: "Tailwind", icon: "tailwind" },
+      { name: "TS", icon: "typescript" },
+    ],
+    prevTitle: "Solar system 3D model",
+    href: "https://i-orbit.vercel.app/",
+    repo: "https://github.com/Lithos-hub/iOrbit",
+    title: "iOrbit (WIP)",
+    description:
+      "3D model of the solar system using React Three Fiber (Three.js) and React.",
+  },
+  {
     image: "/img/apps/iAdopt.jpg",
     stack: [
       { name: "Next 13", icon: "next" },
