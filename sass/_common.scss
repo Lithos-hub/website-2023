@@ -13,7 +13,7 @@
 }
 
 .experience__card {
-  @apply bg-dark-1 border-t border-l border-secondary-1/40 p-5 shadow-2xl bg-opacity-20 flex flex-col flex-shrink-0 gap-5 hover:brightness-110 duration-200 hover:shadow-primary-1;
+  @apply min-w-[400px] bg-dark-1 border-t border-l border-secondary-1/40 p-5 shadow-2xl bg-opacity-20 flex flex-col flex-shrink-0 gap-5 hover:brightness-110 duration-200 hover:shadow-primary-1;
 
   box-shadow: 1rem 1rem 5rem #201523, -0.1rem -0.1rem 0.5rem #ffcb6915;
   transition: 1s ease;

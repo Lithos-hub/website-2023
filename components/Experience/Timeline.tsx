@@ -1,5 +1,5 @@
+import { FC, useRef, useEffect } from "react";
 import { Experience } from "@/models";
-import React, { FC, useMemo } from "react";
 import ExperienceDetail from "./ExperienceDetail";
 
 interface Props {
@@ -10,8 +10,19 @@ interface Props {
 const MONTHS = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
 
 const Timeline: FC<Props> = ({ years, experiences }) => {
+  const timelineBar = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (timelineBar.current) {
+      timelineBar.current.scrollLeft = timelineBar.current.scrollWidth;
+    }
+  }, []);
+
   return (
-    <div className="flex flex-col absolute h-[80vh] mt-20 2xl:w-[80vw] shadow-2xl mx-auto overflow-x-auto">
+    <div
+      ref={timelineBar}
+      className="flex flex-col absolute h-[80vh] mt-20 2xl:w-[80vw] shadow-2xl mx-auto overflow-x-auto"
+    >
       <div className="flex flex-col 2xl:flex-row w-screen px-5">
         {/* Timeline */}
         {years.map((year, i) => (
@@ -37,6 +48,7 @@ const Timeline: FC<Props> = ({ years, experiences }) => {
 
                 return (
                   <>
+                    {/* Highlighted month */}
                     <div key={i} className={`flex flex-col 2xl:gap-5 relative`}>
                       <div className="mx-auto">
                         <div

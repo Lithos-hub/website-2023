@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useMemo, useState } from "react";
+import React, { FC, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Check } from "@mui/icons-material";
 import { Experience } from "@/models";
@@ -18,7 +18,6 @@ const ExperienceDetail: FC<Experience> = ({
   finish,
   tasks,
 }) => {
-  const [cardWidth, setCardWidth] = useState<number>(0);
   const onlyWidth = useWindowWidth();
 
   const { totalMonths, colStart, colEnd } = useMemo(() => {
@@ -52,19 +51,16 @@ const ExperienceDetail: FC<Experience> = ({
     };
   }, [finish, initialYear, initialMonth, endMonth]);
 
-  useEffect(() => {
-    if (onlyWidth > 1536 && totalMonths) {
-      setCardWidth(totalMonths * 50);
-    } else {
-      setCardWidth(500);
-    }
-  }, [onlyWidth, totalMonths]);
+  const cardWidth = useMemo(
+    () => (onlyWidth > 1536 && totalMonths ? 350 : 500),
+    [onlyWidth, totalMonths]
+  );
 
   return (
     <div
-      className={`flex flex-col gap-5 z-50 col-start-${colStart} 2xl:col-end-${colEnd}`}
+      className={`flex flex-col gap-5 z-50 w-auto col-start-${colStart} 2xl:col-end-${colEnd}`}
       style={{
-        width: `${cardWidth ? `${cardWidth}px` : "500px"}`,
+        minWidth: `${cardWidth}px`,
       }}
     >
       <article className="experience__card">
@@ -83,14 +79,14 @@ const ExperienceDetail: FC<Experience> = ({
             }}
             alt={`${title} -  ${subtitle} - experience image`}
             src={image}
-            className="h-14 aspect-square rounded-full"
+            className="w-16 aspect-square object-contain"
           />
           <div>
             <h2 className="text-lg font-bold">{title}</h2>
             <h3 className="text-sm text-secondary-1">{subtitle}</h3>
           </div>
         </div>
-        <ul className="flex flex-wrap gap-5 justify-center w-auto mx-auto">
+        <ul className="flex flex-wrap gap-5 justify-center mx-28">
           {stack.map((item, i) => (
             <li key={i} className="mx-auto">
               <Tooltip title={item.techName} placement="top">

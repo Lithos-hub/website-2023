@@ -7,10 +7,10 @@ import { Experience } from "@/models";
 
 const Experience = () => {
   const years = useMemo(() => {
-    const currentYear = new Date().getFullYear();
+    const currentYearPlusOne = new Date().getFullYear() + 1;
     const initialYear = 2021;
     return Array.from(
-      { length: currentYear - initialYear + 1 },
+      { length: currentYearPlusOne - initialYear + 1 },
       (_, i) => initialYear + i
     );
   }, []);
@@ -44,7 +44,7 @@ const Experience = () => {
           title: "Front-end Developer",
           subtitle: "Cathedral Software",
           start: "JUN 2022",
-          finish: "CURRENTLY",
+          finish: "AUG 2023",
           initialYear: 2022,
           initialMonth: 6,
           endMonth: new Date().getMonth() + 1,
@@ -74,6 +74,28 @@ const Experience = () => {
             "Gitflow, conventional commits and best practices.",
           ],
         },
+        {
+          image: "/logos/innoIT.png",
+          title: "Front-end Developer",
+          subtitle: "InnoIT",
+          start: "AUG 2023",
+          finish: "CURRENTLY",
+          initialYear: 2023,
+          initialMonth: 8,
+          endMonth: new Date().getMonth() + 1,
+          stack: [
+            { techName: "Vue", imageUrl: "/logos/vue.svg" },
+            { techName: "TypeScript", imageUrl: "/logos/typescript.svg" },
+            { techName: "Nuxt", imageUrl: "/logos/nuxt.svg" },
+            { techName: "Jest", imageUrl: "/logos/jest.svg" },
+            { techName: "SASS", imageUrl: "/logos/sass.svg" },
+          ],
+          tasks: [
+            "Migration project from Vue 2/Nuxt 2 to Vue 3/Nuxt 3",
+            "Testing (Jest)",
+            "Gitflow, conventional commits and best practices.",
+          ],
+        },
       ] as Experience[],
     []
   );
@@ -85,7 +107,6 @@ const Experience = () => {
       transition={{ duration: 1.5 }}
       className="h-screen flex flex-col gap-10 justify-center items-center overflow-x-auto"
     >
-      {/* <HeaderTitle title="Experience" /> */}
       <Timeline years={years} experiences={experiences} />
     </motion.div>
   );
