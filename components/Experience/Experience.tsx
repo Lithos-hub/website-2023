@@ -92,6 +92,7 @@ const Experience = () => {
           ],
           tasks: [
             "Migration project from Vue 2/Nuxt 2 to Vue 3/Nuxt 3",
+            "Software architecture tasks",
             "Testing (Jest)",
             "Gitflow, conventional commits and best practices.",
           ],
