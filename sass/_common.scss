@@ -40,14 +40,6 @@
   @apply flex flex-col flex-shrink-0 w-screen h-[70vh] my-auto md:h-screen gap-5 justify-center p-10 items-center z-50;
 }
 
-.project-logo {
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 25%);
-}
-
-.project-header {
-  clip-path: polygon(100% 0, 100% 71%, 91% 100%, 0 100%, 0 0);
-}
-
 .project-button {
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 18%);
 }

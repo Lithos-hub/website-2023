@@ -48,7 +48,7 @@ const Jumbotron = () => {
           delaySpeed={2000}
         />
       </h3>
-      <nav className="grid grid-cols-2 md:grid-cols-4 gap-5 z-20">
+      <nav className="grid grid-cols-3 md:grid-cols-5  gap-5 z-20">
         <button
           onClick={() => navigateToElement("#about")}
           className="uppercase font-extralight link"
@@ -72,6 +72,12 @@ const Jumbotron = () => {
           className="uppercase font-extralight link"
         >
           Projects
+        </button>
+        <button
+          onClick={() => navigateToElement("#works-3d")}
+          className="uppercase font-extralight link"
+        >
+          3D works
         </button>
       </nav>
     </article>

@@ -10,4 +10,5 @@ export { default as ProjectDetail } from "./Projects/ProjectDetail";
 export { default as Projects } from "./Projects/Projects";
 export { default as Avatar } from "./Skills/Avatar";
 export { default as Skills } from "./Skills/Skills";
+export { default as Works3D } from "./Works3D/Works3D";
 export * from "./index";

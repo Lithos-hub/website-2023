@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HeaderTitle } from "@/components";
 
 const About = () => (
   <motion.div
@@ -9,60 +8,79 @@ const About = () => (
     transition={{ duration: 1.5 }}
     className="h-screen flex flex-col w-auto justify-evenly items-center px-[10vw]"
   >
-    {/* <HeaderTitle title="About" /> */}
-
-    <article className="text-center flex flex-col gap-5 mx-auto">
-      <motion.img
-        initial={{
-          x: -200,
-          opacity: 0,
-        }}
-        transition={{
-          duration: 1.2,
-        }}
-        whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        alt="Carlos Segura García biography image"
-        src="/me.jpg"
-        className="h-[120px] w-[120px] lg:w-[200px] lg:h-[200px] mx-auto aspect-square rounded-full md:rounded-xl border border-secondary-1/20 shadow-xl"
-      />
-      <h4 className="font-extralight">
-        This is my
-        <span className="text-secondary-1 font-semibold"> history:</span>
-      </h4>
-      <div className="w-full lg:w-[50vw]">
-        <p className="text-[15px]">
-          Music has been a part of my life since I was 9, but in 2020, I
-          discovered my passion for web development. With a self-taught
-          approach, I dove into online resources, video tutorials, and my own
-          projects. Concurrently, I pursued my studies in DAW CFGS from October
-          2020 to May 2022.
-        </p>
-        <br />
-        <p className="text-[15px]">
-          I kickstarted my career in March 2021 as a frontend developer at a CGI
-          company, where I led the development of the entire frontend of a
-          banking application for nearly a year. My expertise in web development
-          led me to Cathedral Software in June 2022, where I work as a frontend
-          developer.{" "}
-          <strong>
-            Here, I continually learn new and cutting-edge technologies, best
-            practices, and agile methodologies.
-          </strong>
-        </p>
-        <br />
-        <p className="text-[15px]">
-          Moreover, I explore other areas of development, such as backend
-          technologies like Node and{" "}
-          <strong>
-            MongoDB, mobile technologies like Dart and Flutter and WebGL
-            technologies like Three.js.
-          </strong>{" "}
-          I&apos;m always eager to learn and stay up-to-date with the latest
-          trends and tools in the industry.
-        </p>
-        <br />
+    <article className="text-center grid grid-cols-7 items-center gap-5 mx-auto">
+      <div className="col-span-3 flex flex-col gap-5">
+        <motion.img
+          initial={{
+            x: -200,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1.2,
+          }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          alt="Carlos Segura García biography image"
+          src="/me.jpg"
+          className=" h-[120px] w-[120px] lg:w-[200px] lg:h-[200px] mx-auto aspect-square rounded-full md:rounded-xl border border-secondary-1/20 shadow-xl"
+        />
+        <div className="text-sm md:text-base">
+          <p>Since I was a child, my main vocation has been music. </p> <br />
+          <p>
+            In 2020 I discovered the world of programming and the enormous
+            possibilities it offers at a creative and professional level.
+          </p>
+          <br />
+          <p>
+            Since then, I work and keep learning in what has become a new
+            passion.
+          </p>
+        </div>
       </div>
+      <ul className="col-span-4 w-full lg:w-[50vw] flex flex-col gap-5 text-sm md:text-base">
+        <p>Bio timeline: </p>
+        <li className="flex flex-col gap-1">
+          <h3 className="text-secondary-1">Years 2001-2011</h3>
+          <p>Music conservatory studies</p>
+        </li>
+
+        <li className="flex flex-col gap-1">
+          <h3 className="text-secondary-1">Years 2011-2016</h3>
+          <p>Modern music and jazz studies</p>
+        </li>
+
+        <li className="flex flex-col gap-1">
+          <h3 className="text-secondary-1">Years 2016-2020</h3>
+          <p>Music history university degree</p>
+        </li>
+
+        <li className="flex flex-col gap-1">
+          <h3 className="text-secondary-1">October 2020 - May 2022</h3>
+          <p>Official web development studies (CFGS)</p>
+        </li>
+
+        <li className="flex flex-col gap-1">
+          <h3 className="text-secondary-1">Year 2020</h3>
+          <p>
+            Self-taught learning: Python, HTML, CSS, JS, Angular, React, Vue...
+          </p>
+        </li>
+
+        <li className="flex flex-col gap-1">
+          <h3 className="text-secondary-1">October 2020</h3>
+          <p>First web apps with Vue</p>
+        </li>
+
+        <li className="flex flex-col gap-1">
+          <h3 className="text-secondary-1">March 2021</h3>
+          <p>First developer job! 🚀 </p>
+        </li>
+
+        <li className="flex flex-col gap-1">
+          <h3 className="text-secondary-1">Everything else...</h3>
+          <p>Is in the section below, so scroll down!</p>
+        </li>
+      </ul>
     </article>
   </motion.div>
 );

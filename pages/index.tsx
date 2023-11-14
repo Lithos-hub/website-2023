@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useMemo, useRef } from "react";
 import Head from "next/head";
 
 import { DefaultLayout } from "../layout";
@@ -9,9 +9,10 @@ import {
   Hero,
   Projects,
   Skills,
+  Works3D,
+  Jumper,
 } from "@/components";
 import { useIntersectionObserver } from "@/hooks/useIsVisible";
-import Jumper from "@/components/Jumper/Jumper";
 
 const origin = typeof window !== "undefined" && window.location.origin;
 
@@ -21,6 +22,7 @@ export default function Home() {
   const experienceRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const works3DRef = useRef<HTMLDivElement>(null);
 
   const heroIsVisible = useIntersectionObserver(
     { threshold: 0.5, root: null, rootMargin: "50px 50px 50px 50px" },
@@ -41,6 +43,10 @@ export default function Home() {
   const projectsIsVisible = useIntersectionObserver(
     { threshold: 0.5, root: null, rootMargin: "50px 50px 50px 50px" },
     projectsRef
+  );
+  const works3DIsVisible = useIntersectionObserver(
+    { threshold: 0.5, root: null, rootMargin: "50px 50px 50px 50px" },
+    works3DRef
   );
 
   const title = useMemo(() => {
@@ -66,6 +72,10 @@ export default function Home() {
         document.location.href = "#projects";
         activeSection = "#projects";
       }
+      if (works3DIsVisible) {
+        document.location.href = "#3D-works";
+        activeSection = "#3D-works";
+      }
     }
 
     return {
@@ -77,6 +87,8 @@ export default function Home() {
       "#skills": "My Technical Skills | Web Technologies I Specialize In",
       "#projects":
         "Highlighted Projects | Web Applications Developed by Carlos Segura García",
+      "#3D works":
+        "3D works and renders | 3D works developed by Carlos Segura García",
     }[activeSection];
   }, [
     aboutIsVisible,
@@ -84,6 +96,7 @@ export default function Home() {
     heroIsVisible,
     projectsIsVisible,
     skillsIsVisible,
+    works3DIsVisible,
   ]);
 
   const activeSection = useMemo(() => {
@@ -92,12 +105,14 @@ export default function Home() {
     if (experienceIsVisible) return "#experience";
     if (skillsIsVisible) return "#skills";
     if (projectsIsVisible) return "#projects";
+    if (works3DIsVisible) return "#3D Works";
   }, [
     aboutIsVisible,
     experienceIsVisible,
     heroIsVisible,
     projectsIsVisible,
     skillsIsVisible,
+    works3DIsVisible,
   ]);
 
   return (
@@ -175,6 +190,14 @@ export default function Home() {
             className="h-screen lg:snap-center bg-gradient-to-b from-[#110a1a] to-transparent relative"
           >
             <Projects />
+          </section>
+          {/* 3D Works */}
+          <section
+            ref={works3DRef}
+            id="works-3d"
+            className="h-screen lg:snap-center bg-gradient-to-b from-[#110a1a] to-transparent relative"
+          >
+            <Works3D />
           </section>
           {!heroIsVisible && <Jumper />}
         </div>

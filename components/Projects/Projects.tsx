@@ -157,10 +157,8 @@ const Projects = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="lg:h-full py-20 lg:py-0 w-full flex flex-col items-center justify-center"
+      className="lg:h-screen h-full overflow-y-scroll w-full flex flex-col items-center md:justify-center"
     >
-      {/* <HeaderTitle title="Projects" /> */}
-
       <div className="w-full absolute top-[30%] bg-gradient-to-br from-transparent via-dark-1/50 to-secondary-1/10 left-0 h-[500px] -skew-y-12 blur-lg" />
       <div className="projects__ray-1" />
       <div className="projects__ray-2" />
