@@ -57,6 +57,16 @@ const Header: FC<Props> = ({ activeSection }) => {
               <GitHub />
             </IconButton>
           </Link>
+
+          <Link href="https://www.behance.net/carlossegura25" target="_blank">
+            <IconButton
+              color="primary"
+              aria-label="Behance link"
+              component="label"
+            >
+              <motion.img src="/logos/behance.svg" className="h-7" />
+            </IconButton>
+          </Link>
         </motion.div>
 
         <motion.div
