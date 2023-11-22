@@ -8,6 +8,14 @@ interface Work {
 
 const works3D = [
   {
+    title: "Contact - Original Sci-fi landscape",
+    fileName: "scifi-4.png",
+  },
+  {
+    title: "Bag End - Landscape Render",
+    fileName: "lotr-1.png",
+  },
+  {
     title: "Domain - Original sci-fi/futuristic scene",
     fileName: "scifi-3.png",
   },
