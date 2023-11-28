@@ -6,7 +6,7 @@ interface Work {
   fileName: string;
 }
 
-const works3D = [
+const works3D: Work[] = [
   {
     title: "Nowhere - Original abstract render",
     fileName: "nowhere.jpg",
