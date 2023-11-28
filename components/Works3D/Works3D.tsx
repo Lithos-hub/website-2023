@@ -8,6 +8,10 @@ interface Work {
 
 const works3D = [
   {
+    title: "Nowhere - Original abstract render",
+    fileName: "nowhere.jpg",
+  },
+  {
     title: "Systematic Chaos - Original render",
     fileName: "systematic-chaos.jpg",
   },
