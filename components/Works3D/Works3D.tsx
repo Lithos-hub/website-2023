@@ -8,19 +8,31 @@ interface Work {
 
 const works3D = [
   {
+    title: "Systematic Chaos - Original render",
+    fileName: "systematic-chaos.jpg",
+  },
+  {
+    title: "Hazy Dream - Original abstract render",
+    fileName: "abstract-1-fog.jpg",
+  },
+  {
+    title: "Other World - Original landscape render",
+    fileName: "planet-landscape.png",
+  },
+  {
     title: "Contact - Original Sci-fi landscape",
     fileName: "scifi-4.png",
   },
   {
-    title: "Bag End - Landscape Render",
+    title: "Bag End - Landscape render",
     fileName: "lotr-1.png",
   },
   {
-    title: "Domain - Original sci-fi/futuristic scene",
+    title: "Domain - Original sci-fi/futuristic render",
     fileName: "scifi-3.png",
   },
   {
-    title: "Portal - Original magic/fantasy scene",
+    title: "Portal - Original magic/fantasy render",
     fileName: "magical-1.png",
   },
   {
@@ -28,19 +40,19 @@ const works3D = [
     fileName: "scifi-2.png",
   },
   {
-    title: "Final encounter - Original dark sci-fi scene",
+    title: "Final encounter - Original dark sci-fi render",
     fileName: "scifi-1.png",
   },
   {
-    title: "The Arrival - Landscape Render",
+    title: "The Arrival - Landscape render",
     fileName: "the-arrival.png",
   },
   {
-    title: "LV-426 Planet - Alien (1979)",
+    title: "Alien (1979) - Planet LV-426",
     fileName: "alien-1.png",
   },
   {
-    title: "Sci-fi Spaceship Corridor - Inspired by Alien movies",
+    title: "Sci-fi spaceship corridor",
     fileName: "scifi-corridor-1.png",
   },
   {
