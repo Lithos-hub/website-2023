@@ -8,7 +8,15 @@ interface Work {
 
 const works3D: Work[] = [
   {
-    title: "Nowhere - Original abstract render",
+    title: "One Last Yearning - Original unreal render",
+    fileName: "one-last-yearning.jpg",
+  },
+  {
+    title: "In the end - Original unreal render",
+    fileName: "in-the-end.png",
+  },
+  {
+    title: "Nowhere - Original unreal render",
     fileName: "nowhere.jpg",
   },
   {
@@ -93,7 +101,7 @@ const Works3D = () => {
         Since october 2023 I have been learning 3D modelling with Blender, and
         these are some of my works:
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-h-[70vh] overflow-y-auto p-5 border border-primary-1/10 rounded-l-2xl">
         {works3D.map(({ fileName, title }, index) => (
           <div className="relative" key={index}>
             <motion.img
@@ -110,7 +118,7 @@ const Works3D = () => {
               alt="Blender render"
               src={`/img/renders/${fileName}`}
               onClick={showImage({ fileName, title })}
-              className="w-full h-full  aspect-square rounded-xl shadow-xl object-cover cursor-pointer hover:scale-105 duration-200"
+              className="w-full h-full aspect-square rounded-xl shadow-xl object-cover cursor-pointer hover:scale-105 duration-200"
             />
           </div>
         ))}
