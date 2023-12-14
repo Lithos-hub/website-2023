@@ -7,6 +7,21 @@ import { Project } from "@/models";
 
 const projects: Project[] = [
   {
+    image: "/img/apps/iUI.jpg",
+    stack: [
+      { name: "Vue", icon: "vue" },
+      { name: "TS", icon: "typescript" },
+      { name: "Tailwind", icon: "tailwind" },
+      { name: "SCSS", icon: "sass" },
+    ],
+    prevTitle: "UI components portfolio",
+    href: "https://iui-app.netlify.app/",
+    repo: "https://github.com/Lithos-hub/iUI",
+    title: "iUI",
+    description:
+      "iUI is a components portfolio made with Vue 3, TypeScript, Tailwind CSS, SASS, Vitest and Vite.",
+  },
+  {
     image: "/img/apps/iOrbit.jpg",
     stack: [
       { name: "React", icon: "react" },
@@ -17,7 +32,7 @@ const projects: Project[] = [
     prevTitle: "Solar system 3D model",
     href: "https://i-orbit.vercel.app/",
     repo: "https://github.com/Lithos-hub/iOrbit",
-    title: "iOrbit (WIP)",
+    title: "iOrbit",
     description:
       "3D model of the solar system using React Three Fiber (Three.js) and React.",
   },
@@ -133,22 +148,22 @@ const projects: Project[] = [
     description:
       "Online code editor with HTML, CSS and JavaScript using Monaco Editor.",
   },
-  {
-    image: "/img/apps/iShop.jpg",
-    stack: [
-      { name: "Vue 3", icon: "vue" },
-      { name: "HTML", icon: "html" },
-      { name: "CSS", icon: "css" },
-      { name: "SCSS", icon: "sass" },
-      { name: "JS", icon: "javascript" },
-      { name: "Firebase", icon: "firebase" },
-    ],
-    prevTitle: "Frontend SPA (Vue 3)",
-    href: "https://ishop-app.netlify.app/",
-    repo: "https://github.com/Lithos-hub/iShop",
-    title: "iShop",
-    description: "Fake e-commerce app simulating a real ordering process.",
-  },
+  // {
+  //   image: "/img/apps/iShop.jpg",
+  //   stack: [
+  //     { name: "Vue 3", icon: "vue" },
+  //     { name: "HTML", icon: "html" },
+  //     { name: "CSS", icon: "css" },
+  //     { name: "SCSS", icon: "sass" },
+  //     { name: "JS", icon: "javascript" },
+  //     { name: "Firebase", icon: "firebase" },
+  //   ],
+  //   prevTitle: "Frontend SPA (Vue 3)",
+  //   href: "https://ishop-app.netlify.app/",
+  //   repo: "https://github.com/Lithos-hub/iShop",
+  //   title: "iShop",
+  //   description: "Fake e-commerce app simulating a real ordering process.",
+  // },
 ];
 
 const Projects = () => {
