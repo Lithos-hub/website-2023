@@ -8,6 +8,14 @@ interface Work {
 
 const works3D: Work[] = [
   {
+    title: "You - Original unreal render",
+    fileName: "you-2.jpg",
+  },
+  {
+    title: "The Last Warrior - Original unreal render",
+    fileName: "the-last-warrior-2.png",
+  },
+  {
     title: "The Offering - Original unreal render",
     fileName: "the-offering-4-postprod.png",
   },
