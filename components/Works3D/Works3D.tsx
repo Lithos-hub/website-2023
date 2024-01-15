@@ -87,70 +87,70 @@ const works3D: Work[] = [
     title: "Nowhere - Original unreal render",
     fileName: "nowhere.jpg",
   },
-  {
-    title: "Systematic Chaos - Original render",
-    fileName: "systematic-chaos.jpg",
-  },
-  {
-    title: "Hazy Dream - Original abstract render",
-    fileName: "abstract-1-fog.jpg",
-  },
-  {
-    title: "Other World - Original landscape render",
-    fileName: "planet-landscape.png",
-  },
-  {
-    title: "Contact - Original Sci-fi landscape",
-    fileName: "scifi-4.png",
-  },
-  {
-    title: "Bag End - Landscape render",
-    fileName: "lotr-1.png",
-  },
-  {
-    title: "Domain - Original sci-fi/futuristic render",
-    fileName: "scifi-3.png",
-  },
-  {
-    title: "Portal - Original magic/fantasy render",
-    fileName: "magical-1.png",
-  },
-  {
-    title: "Freedom - Original Sci-fi landscape",
-    fileName: "scifi-2.png",
-  },
-  {
-    title: "Final encounter - Original dark sci-fi render",
-    fileName: "scifi-1.png",
-  },
-  {
-    title: "The Arrival - Landscape render",
-    fileName: "the-arrival.png",
-  },
-  {
-    title: "Alien (1979) - Planet LV-426",
-    fileName: "alien-1.png",
-  },
-  {
-    title: "Sci-fi spaceship corridor",
-    fileName: "scifi-corridor-1.png",
-  },
-  {
-    title: "Millenium Falcon in Bespin - Low poly diorama",
-    fileName: "star-wars-millenium.png",
-  },
-  {
-    title: "Harry Potter - Hogwarts Express low poly diorama",
-    fileName: "harry-potter-1.png",
-  },
-  {
-    title: "Jurassic Park - T. Rex attack low poly diorama",
-    fileName: "jurassic-1.png",
-  },
-  {
-    title: "Star Wars - Death Star attack low poly diorama",
-    fileName: "death-star.png",
-  },
+  // {
+  //   title: "Systematic Chaos - Original render",
+  //   fileName: "systematic-chaos.jpg",
+  // },
+  // {
+  //   title: "Hazy Dream - Original abstract render",
+  //   fileName: "abstract-1-fog.jpg",
+  // },
+  // {
+  //   title: "Other World - Original landscape render",
+  //   fileName: "planet-landscape.png",
+  // },
+  // {
+  //   title: "Contact - Original Sci-fi landscape",
+  //   fileName: "scifi-4.png",
+  // },
+  // {
+  //   title: "Bag End - Landscape render",
+  //   fileName: "lotr-1.png",
+  // },
+  // {
+  //   title: "Domain - Original sci-fi/futuristic render",
+  //   fileName: "scifi-3.png",
+  // },
+  // {
+  //   title: "Portal - Original magic/fantasy render",
+  //   fileName: "magical-1.png",
+  // },
+  // {
+  //   title: "Freedom - Original Sci-fi landscape",
+  //   fileName: "scifi-2.png",
+  // },
+  // {
+  //   title: "Final encounter - Original dark sci-fi render",
+  //   fileName: "scifi-1.png",
+  // },
+  // {
+  //   title: "The Arrival - Landscape render",
+  //   fileName: "the-arrival.png",
+  // },
+  // {
+  //   title: "Alien (1979) - Planet LV-426",
+  //   fileName: "alien-1.png",
+  // },
+  // {
+  //   title: "Sci-fi spaceship corridor",
+  //   fileName: "scifi-corridor-1.png",
+  // },
+  // {
+  //   title: "Millenium Falcon in Bespin - Low poly diorama",
+  //   fileName: "star-wars-millenium.png",
+  // },
+  // {
+  //   title: "Harry Potter - Hogwarts Express low poly diorama",
+  //   fileName: "harry-potter-1.png",
+  // },
+  // {
+  //   title: "Jurassic Park - T. Rex attack low poly diorama",
+  //   fileName: "jurassic-1.png",
+  // },
+  // {
+  //   title: "Star Wars - Death Star attack low poly diorama",
+  //   fileName: "death-star.png",
+  // },
 ];
 
 const Works3D = () => {
@@ -167,7 +167,14 @@ const Works3D = () => {
     >
       <p className="w-[70vw] text-center">
         Since october 2023 I have been learning 3D modelling with Blender, and
-        these are some of my works:
+        these are some of my last works{" "}
+        <a
+          className="text-cyan-500 underline"
+          href="https://www.behance.net/carlossegura25"
+          target="_blank"
+        >
+          (you can visit here my Behance profile)
+        </a>
       </p>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-h-[70vh] overflow-y-auto p-5 border border-primary-1/10 rounded-l-2xl">
         {works3D.map(({ fileName, title }, index) => (
