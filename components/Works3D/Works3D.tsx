@@ -8,6 +8,54 @@ interface Work {
 
 const works3D: Work[] = [
   {
+    title: "S Y N T H Collection (Januay 2024)",
+    fileName: "synthwave-1.png",
+  },
+  {
+    title: "S Y N T H Collection (Januay 2024)",
+    fileName: "synthwave-2.png",
+  },
+  {
+    title: "S Y N T H Collection (Januay 2024)",
+    fileName: "synthwave-3-e.png",
+  },
+  {
+    title: "S Y N T H Collection (Januay 2024)",
+    fileName: "synthwave-4.png",
+  },
+  {
+    title: "S Y N T H Collection (Januay 2024)",
+    fileName: "synthwave-5-b.png",
+  },
+  {
+    title: "S Y N T H Collection (Januay 2024)",
+    fileName: "synthwave-6.png",
+  },
+  {
+    title: "S Y N T H Collection (Januay 2024)",
+    fileName: "synthwave-7.png",
+  },
+  {
+    title: "S Y N T H Collection (Januay 2024)",
+    fileName: "synthwave-8.png",
+  },
+  {
+    title: "O R B S Collection (December 2023)",
+    fileName: "orb-a.png",
+  },
+  {
+    title: "O R B S Collection (December 2023)",
+    fileName: "orb-b.png",
+  },
+  {
+    title: "O R B S Collection (December 2023)",
+    fileName: "orb-c.png",
+  },
+  {
+    title: "O R B S Collection (December 2023)",
+    fileName: "orb-d-2.png",
+  },
+  {
     title: "You - Original unreal render",
     fileName: "you-2.jpg",
   },
@@ -156,14 +204,14 @@ const Works3D = () => {
       )}
 
       {imageToShow && (
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 rounded-2xl overflow-hidden">
-          <div className="mx-auto w-[80vw]">
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 rounded-2xl overflow-auto w-[80vw] max-h-[95vh]">
+          <div className="relative mx-auto">
             <motion.img
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               src={`/img/renders/${imageToShow.fileName}`}
-              className="object-contain"
+              className="w-full"
               onClick={hideImage()}
             />
             <h2 className="absolute bottom-0 left-0 w-full backdrop-blur bg-black/50 p-2">
