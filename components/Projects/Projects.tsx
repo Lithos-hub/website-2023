@@ -172,14 +172,14 @@ const Projects = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="lg:h-screen h-full overflow-y-scroll w-full flex flex-col items-center md:justify-center"
+      className="lg:h-screen h-full w-full flex flex-col w-screen items-center justify-center"
     >
       <div className="w-full absolute top-[30%] bg-gradient-to-br from-transparent via-dark-1/50 to-secondary-1/10 left-0 h-[500px] -skew-y-12 blur-lg" />
       <div className="projects__ray-1" />
       <div className="projects__ray-2" />
       <div className="projects__ray-3" />
 
-      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-5">
+      <div className="flex flex-col w-[95vw] max-h-[75vh] overflow-y-auto">
         {projects.map((project, i) => (
           <article key={i}>
             <ProjectDetail {...project} />

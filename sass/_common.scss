@@ -40,17 +40,6 @@
   @apply flex flex-col flex-shrink-0 w-screen h-[70vh] my-auto md:h-screen gap-5 justify-center p-10 items-center z-50;
 }
 
-.project-button {
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 18%);
-}
-.projectrepo-button-inner {
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 33%);
-
-  &:hover {
-    box-shadow: inset 0px 0px 10px black;
-  }
-}
-
 .projectapp-button-inner:hover {
   box-shadow: inset 0px 0px 10px black;
 }
