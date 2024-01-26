@@ -21,7 +21,7 @@ const Timeline: FC<Props> = ({ years, experiences }) => {
   return (
     <div
       ref={timelineBar}
-      className="flex flex-col absolute h-[80vh] mt-20 2xl:w-[80vw] shadow-2xl mx-auto overflow-x-auto"
+      className="flex flex-col absolute h-[80vh] mt-20 2xl:w-[90vw] shadow-2xl mx-auto overflow-x-auto"
     >
       <div className="flex flex-col 2xl:flex-row w-screen px-5">
         {/* Timeline */}
@@ -33,7 +33,7 @@ const Timeline: FC<Props> = ({ years, experiences }) => {
                   i !== 0 && "md:border-l border-secondary-1/10"
                 } `}
               >
-                <p className="text-primary-1/20 text-5xl tracking-widest">
+                <p className="text-primary-1/20 3xl:text-5xl 2xl:text-3xl text-2xl tracking-widest">
                   {year}
                 </p>
               </div>

@@ -1,9 +1,8 @@
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 
-import { HeaderTitle } from "@/components";
 import Timeline from "./Timeline";
-import { Experience } from "@/models";
+import { Experience as IExperience } from "@/models";
 
 const Experience = () => {
   const years = useMemo(() => {
@@ -97,7 +96,7 @@ const Experience = () => {
             "Gitflow, conventional commits and best practices.",
           ],
         },
-      ] as Experience[],
+      ] as IExperience[],
     []
   );
 

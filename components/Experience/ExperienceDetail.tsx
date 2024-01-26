@@ -52,7 +52,7 @@ const ExperienceDetail: FC<Experience> = ({
   }, [finish, initialYear, initialMonth, endMonth]);
 
   const cardWidth = useMemo(
-    () => (onlyWidth > 1536 && totalMonths ? 350 : 500),
+    () => (onlyWidth >= 1450 && totalMonths ? 420 : 350),
     [onlyWidth, totalMonths]
   );
 
@@ -60,10 +60,11 @@ const ExperienceDetail: FC<Experience> = ({
     <div
       className={`flex flex-col gap-5 z-50 w-auto col-start-${colStart} 2xl:col-end-${colEnd}`}
       style={{
-        minWidth: `${cardWidth}px`,
+        width: `${cardWidth}px`,
+        maxWidth: `${cardWidth + 50}px`,
       }}
     >
-      <article className="experience__card">
+      <article className="experience__card relative">
         <div className="flex justify-between w-full items-center">
           <motion.img
             initial={{
@@ -86,7 +87,7 @@ const ExperienceDetail: FC<Experience> = ({
             <h3 className="text-sm text-secondary-1">{subtitle}</h3>
           </div>
         </div>
-        <ul className="flex flex-wrap gap-5 justify-center mx-28">
+        <ul className="flex flex-wrap mx-auto w-full gap-5 justify-center items-center">
           {stack.map((item, i) => (
             <li key={i} className="mx-auto">
               <Tooltip title={item.techName} placement="top">
