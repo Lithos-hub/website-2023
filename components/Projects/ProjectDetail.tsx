@@ -15,18 +15,18 @@ const ProjectDetail: FC<Project> = ({
 }) => (
   <article className="relative bg-transparent backdrop-blur-lg w-full">
     {/* Right button with link to project and repo */}
-    <div className="project-button absolute w-[50px] flex flex-col justify-center items-center h-full bottom-0 right-0 bg-gradient-to-b from-primary-1/50 to-secondary-1/50 z-50">
+    <div className="absolute w-[50px] flex flex-col justify-center items-center h-full bottom-0 right-0 bg-gradient-to-b from-primary-1/50 to-secondary-1/50 z-50">
       <a
         href={repo}
         target="_blank"
-        className=" bg-dark-1 h-full flex flex-col justify-end pb-5 w-full items-center cursor-pointer hover:bg-white duration-300 hover:text-black"
+        className="bg-dark-1 h-full flex flex-col justify-center w-full items-center cursor-pointer hover:bg-white duration-300 hover:text-black"
       >
         <GitHub fontSize="medium" />
       </a>
       <a
         href={href}
         target="_blank"
-        className=" bg-secondary-1 h-full text-black border border-black h-full flex flex-col justify-center w-full items-center cursor-pointer hover:bg-dark-1 duration-100 hover:text-primary-1"
+        className="bg-secondary-1 h-full text-black h-full flex flex-col justify-center w-full items-center cursor-pointer hover:bg-white duration-100 hover:text-dark"
       >
         <OpenInNew fontSize="medium" />
       </a>
