@@ -23,10 +23,15 @@ const ProjectDetail: FC<Project> = ({
       >
         <GitHub fontSize="medium" />
       </a>
+
       <a
         href={href}
         target="_blank"
-        className="bg-secondary-1 h-full text-black h-full flex flex-col justify-center w-full items-center cursor-pointer hover:bg-white duration-100 hover:text-dark"
+        className={`${
+          href
+            ? "bg-secondary-1 hover:bg-white hover:text-dark cursor-pointer"
+            : "bg-gray-500"
+        } h-full text-black h-full flex flex-col justify-center w-full items-center duration-100`}
       >
         <OpenInNew fontSize="medium" />
       </a>

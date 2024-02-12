@@ -9,6 +9,6 @@ export interface Project {
   stack: Stack[];
   prevTitle: string;
   description: string;
-  href: string;
+  href?: string;
   repo: string;
 }

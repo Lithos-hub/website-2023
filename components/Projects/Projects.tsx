@@ -7,6 +7,22 @@ import { Project } from "@/models";
 
 const projects: Project[] = [
   {
+    image: "/img/apps/iTrackFlow.jpg",
+    stack: [
+      { name: "Nuxt", icon: "nuxt" },
+      { name: "Vue", icon: "vue" },
+      { name: "TS", icon: "typescript" },
+      { name: "Vitest", icon: "vitest" },
+      { name: "Tailwind", icon: "tailwind" },
+      { name: "SCSS", icon: "sass" },
+    ],
+    prevTitle: "Nuxt 3 landing page + app",
+    repo: "https://github.com/Lithos-hub/iTrackFlow",
+    title: "iTrackFlow (WORK IN PROGRESS)",
+    description:
+      "Web tool for musicians, composers and music bands to improve the workflow and the music production",
+  },
+  {
     image: "/img/apps/iUI.jpg",
     stack: [
       { name: "Vue", icon: "vue" },
