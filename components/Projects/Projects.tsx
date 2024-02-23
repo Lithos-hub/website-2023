@@ -7,6 +7,19 @@ import { Project } from "@/models";
 
 const projects: Project[] = [
   {
+    image: "/img/apps/vue-form-latte.png",
+    stack: [
+      { name: "Vue", icon: "vue" },
+      { name: "TS", icon: "typescript" },
+      { name: "Vitest", icon: "vitest" },
+      { name: "Tailwind", icon: "tailwind" },
+    ],
+    prevTitle: "NPM Package",
+    repo: "https://github.com/Lithos-hub/vue-form-latte",
+    title: "Vue Form Latte (WORK IN PROGRESS)",
+    description: "Component library to generate dynamic forms",
+  },
+  {
     image: "/img/apps/iTrackFlow.jpg",
     stack: [
       { name: "Nuxt", icon: "nuxt" },
@@ -164,22 +177,22 @@ const projects: Project[] = [
     description:
       "Online code editor with HTML, CSS and JavaScript using Monaco Editor.",
   },
-  // {
-  //   image: "/img/apps/iShop.jpg",
-  //   stack: [
-  //     { name: "Vue 3", icon: "vue" },
-  //     { name: "HTML", icon: "html" },
-  //     { name: "CSS", icon: "css" },
-  //     { name: "SCSS", icon: "sass" },
-  //     { name: "JS", icon: "javascript" },
-  //     { name: "Firebase", icon: "firebase" },
-  //   ],
-  //   prevTitle: "Frontend SPA (Vue 3)",
-  //   href: "https://ishop-app.netlify.app/",
-  //   repo: "https://github.com/Lithos-hub/iShop",
-  //   title: "iShop",
-  //   description: "Fake e-commerce app simulating a real ordering process.",
-  // },
+  {
+    image: "/img/apps/iShop.jpg",
+    stack: [
+      { name: "Vue 3", icon: "vue" },
+      { name: "HTML", icon: "html" },
+      { name: "CSS", icon: "css" },
+      { name: "SCSS", icon: "sass" },
+      { name: "JS", icon: "javascript" },
+      { name: "Firebase", icon: "firebase" },
+    ],
+    prevTitle: "Frontend SPA (Vue 3)",
+    href: "https://ishop-app.netlify.app/",
+    repo: "https://github.com/Lithos-hub/iShop",
+    title: "iShop",
+    description: "Fake e-commerce app simulating a real ordering process.",
+  },
 ];
 
 const Projects = () => {
