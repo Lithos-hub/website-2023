@@ -14,8 +14,9 @@ const Timeline: FC<Props> = ({ years, experiences }) => {
 
   useEffect(() => {
     if (timelineBar.current) {
+      // Scroll to the end of the timeline when the component is mounted
       timelineBar.current.scrollLeft = timelineBar.current.scrollWidth;
-    }
+      }
   }, []);
 
   return (

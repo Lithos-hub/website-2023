@@ -58,7 +58,7 @@ const ExperienceDetail: FC<Experience> = ({
 
   return (
     <div
-      className={`flex flex-col gap-5 z-50 w-auto col-start-${colStart} 2xl:col-end-${colEnd}`}
+      className={`flex flex-col gap-5 z-50 w-full col-start-${colStart} 2xl:col-end-${colEnd}`}
       style={{
         width: `${cardWidth}px`,
         maxWidth: `${cardWidth + 50}px`,
@@ -111,17 +111,17 @@ const ExperienceDetail: FC<Experience> = ({
             </li>
           ))}
         </ul>
-        <h4 className="flex gap-5 justify-between md:mx-auto">
+        <h4 className="flex gap-5 justify-between md:mx-auto font-bold text-secondary-1">
           <small>{start}</small>
           <small>-</small>
           <small className={`${finish === "CURRENTLY" && "text-green-500"}`}>
             {finish}
           </small>
         </h4>
-        <ul className="mx-auto">
+        <ul>
           {tasks.map((task, i) => (
-            <li key={i} className="gap-2 my-2">
-              <Check color="secondary" className="text-sm" />
+            <li key={i} className="text-justify">
+              <Check color="secondary" className="text-xs" />
               <small className="ml-2 text-xs">{task}</small>
             </li>
           ))}
