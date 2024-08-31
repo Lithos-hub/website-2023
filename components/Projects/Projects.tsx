@@ -16,25 +16,25 @@ const projects: Project[] = [
     ],
     prevTitle: "NPM Package",
     repo: "https://github.com/Lithos-hub/vue-form-latte",
-    title: "Vue Form Latte (WORK IN PROGRESS)",
+    title: "Vue Form Latte",
     description: "Component library to generate dynamic forms",
   },
-  {
-    image: "/img/apps/iTrackFlow.jpg",
-    stack: [
-      { name: "Nuxt", icon: "nuxt" },
-      { name: "Vue", icon: "vue" },
-      { name: "TS", icon: "typescript" },
-      { name: "Vitest", icon: "vitest" },
-      { name: "Tailwind", icon: "tailwind" },
-      { name: "SCSS", icon: "sass" },
-    ],
-    prevTitle: "Nuxt 3 landing page + app",
-    repo: "https://github.com/Lithos-hub/iTrackFlow",
-    title: "iTrackFlow (WORK IN PROGRESS)",
-    description:
-      "Web tool for musicians, composers and music bands to improve the workflow and the music production",
-  },
+  // {
+  //   image: "/img/apps/iTrackFlow.jpg",
+  //   stack: [
+  //     { name: "Nuxt", icon: "nuxt" },
+  //     { name: "Vue", icon: "vue" },
+  //     { name: "TS", icon: "typescript" },
+  //     { name: "Vitest", icon: "vitest" },
+  //     { name: "Tailwind", icon: "tailwind" },
+  //     { name: "SCSS", icon: "sass" },
+  //   ],
+  //   prevTitle: "Nuxt 3 landing page + app",
+  //   repo: "https://github.com/Lithos-hub/iTrackFlow",
+  //   title: "iTrackFlow",
+  //   description:
+  //     "Web tool for musicians, composers and music bands to improve the workflow and the music production",
+  // },
   {
     image: "/img/apps/iUI.jpg",
     stack: [
@@ -63,7 +63,7 @@ const projects: Project[] = [
     repo: "https://github.com/Lithos-hub/iOrbit",
     title: "iOrbit",
     description:
-      "3D model of the solar system using React Three Fiber (Three.js) and React.",
+      "Interactive 3D solar system model using React Three Fiber (Three.js) and React.",
   },
   {
     image: "/img/apps/iAdopt.jpg",

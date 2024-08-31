@@ -11,14 +11,14 @@ const works3D: Work[] = [
     title: "S Y N T H Collection (Januay 2024)",
     fileName: "synthwave-1.png",
   },
-  {
-    title: "S Y N T H Collection (Januay 2024)",
-    fileName: "synthwave-2.png",
-  },
-  {
-    title: "S Y N T H Collection (Januay 2024)",
-    fileName: "synthwave-3-e.png",
-  },
+  // {
+  //   title: "S Y N T H Collection (Januay 2024)",
+  //   fileName: "synthwave-2.png",
+  // },
+  // {
+  //   title: "S Y N T H Collection (Januay 2024)",
+  //   fileName: "synthwave-3-e.png",
+  // },
   {
     title: "S Y N T H Collection (Januay 2024)",
     fileName: "synthwave-4.png",
@@ -35,26 +35,26 @@ const works3D: Work[] = [
     title: "S Y N T H Collection (Januay 2024)",
     fileName: "synthwave-7.png",
   },
-  {
-    title: "S Y N T H Collection (Januay 2024)",
-    fileName: "synthwave-8.png",
-  },
-  {
-    title: "O R B S Collection (December 2023)",
-    fileName: "orb-a.png",
-  },
-  {
-    title: "O R B S Collection (December 2023)",
-    fileName: "orb-b.png",
-  },
+  // {
+  //   title: "S Y N T H Collection (Januay 2024)",
+  //   fileName: "synthwave-8.png",
+  // },
+  // {
+  //   title: "O R B S Collection (December 2023)",
+  //   fileName: "orb-a.png",
+  // },
+  // {
+  //   title: "O R B S Collection (December 2023)",
+  //   fileName: "orb-b.png",
+  // },
   {
     title: "O R B S Collection (December 2023)",
     fileName: "orb-c.png",
   },
-  {
-    title: "O R B S Collection (December 2023)",
-    fileName: "orb-d-2.png",
-  },
+  // {
+  //   title: "O R B S Collection (December 2023)",
+  //   fileName: "orb-d-2.png",
+  // },
   {
     title: "You - Original unreal render",
     fileName: "you-2.jpg",
@@ -79,14 +79,14 @@ const works3D: Work[] = [
     title: "One Last Yearning - Original unreal render",
     fileName: "one-last-yearning.jpg",
   },
-  {
-    title: "In the end - Original unreal render",
-    fileName: "in-the-end.png",
-  },
-  {
-    title: "Nowhere - Original unreal render",
-    fileName: "nowhere.jpg",
-  },
+  // {
+  //   title: "In the end - Original unreal render",
+  //   fileName: "in-the-end.png",
+  // },
+  // {
+  //   title: "Nowhere - Original unreal render",
+  //   fileName: "nowhere.jpg",
+  // },
   // {
   //   title: "Systematic Chaos - Original render",
   //   fileName: "systematic-chaos.jpg",
@@ -165,8 +165,8 @@ const Works3D = () => {
       transition={{ duration: 1.5 }}
       className="md:h-screen max-h-[80vh] md:max-h-none py-10 md:py-0 flex flex-col gap-5 overflow-y-scroll w-full items-center md:justify-center md:px-[10vw]"
     >
-      <p className="w-[70vw] text-center">
-        Since october 2023 I have been learning 3D modelling with Blender, and
+      <p className="w-[50vw] text-center">
+        Since october 2023 to january 2024 I was learning 3D modelling with Blender, and
         these are some of my last works{" "}
         <a
           className="text-cyan-500 underline"
@@ -176,9 +176,9 @@ const Works3D = () => {
           (you can visit here my Behance profile)
         </a>
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-h-[70vh] overflow-y-auto p-5 border border-primary-1/10 rounded-l-2xl">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-5 max-h-[70vh] overflow-y-auto p-5 border border-primary-1/10 rounded-2xl">
         {works3D.map(({ fileName, title }, index) => (
-          <div className="relative" key={index}>
+          <div className="hover:scale-105 hover:shadow ease-in transition-transform" key={index}>
             <motion.img
               key={index}
               initial={{
@@ -211,14 +211,14 @@ const Works3D = () => {
       )}
 
       {imageToShow && (
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 rounded-2xl overflow-auto w-[80vw] max-h-[95vh]">
-          <div className="relative mx-auto">
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 rounded-2xl overflow-auto max-w-[80vw] max-h-[90vh] shadow-xl ">
+          <div className="relative mx-auto w-[80vw] h-[90vh]">
             <motion.img
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               src={`/img/renders/${imageToShow.fileName}`}
-              className="w-full"
+              className="w-full h-full object-cover"
               onClick={hideImage()}
             />
             <h2 className="absolute bottom-0 left-0 w-full backdrop-blur bg-black/50 p-2">
